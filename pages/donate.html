@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Give Back & Donate - MHCS Alumni</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/visibility-fix.css">
+    <link rel="stylesheet" href="../css/responsive-enhanced.css">
+    <link rel="stylesheet" href="../css/mobile-responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="../assets/logo mhcs.png" alt="MHCS Logo" style="height: 50px; width: auto;">
+                <span>MHCS Alumni</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="reunions.html">Reunions</a></li>
+                <li><a href="donate.html" class="active">Give Back</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons" style="display: flex; gap: 10px;">
+                <a href="../login.html" id="loginBtn" class="cta-button" style="background-color: #667eea; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s;">Log In</a>
+                <a href="../login.html?tab=register" id="signupBtn" class="cta-button" style="background-color: #0066ff; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid white;">Sign Up</a>
+                <button id="logoutBtn" class="cta-button" style="background-color: #e74c3c; padding: 10px 20px; border-radius: 5px; color: white; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: none;">Logout</button>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section style="background: linear-gradient(135deg, #003d7a, #0056b3); color: white; padding: 4rem 2rem; padding-top: calc(4rem + 70px);">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Give Back & Support Our Mission</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Help us provide quality education and formation for the next generation</p>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Impact Projects</h2>
+                <p>See how your donations make a difference in our students' lives and our Seminary</p>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 3rem;">
+                <div class="card fade-in-section">
+                    <div style="background: linear-gradient(135deg, var(--light-blue), var(--accent-blue)); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 2rem;">🎓</h3>
+                    </div>
+                    <h3 class="card-title">Seminary Scholarship Fund</h3>
+                    <p class="card-text">Support deserving students through merit-based and need-based scholarships. Help ensure that financial constraints don't prevent qualified individuals from pursuing seminary formation.</p>
+                    <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                        <div style="background: linear-gradient(90deg, var(--light-blue), var(--accent-blue)); height: 100%; width: 65%; border-radius: 10px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; color: var(--gray-dark); font-weight: 600;">
+                        <span>₱2.5M of ₱3.8M</span>
+                        <span>65%</span>
+                    </div>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">Goal: ₱3.8 Million</p>
+                    <a href="#donation-form" class="btn btn-primary" style="width: 100%;">Contribute</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="background: linear-gradient(135deg, var(--light-blue), var(--accent-blue)); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 2rem;">🏫</h3>
+                    </div>
+                    <h3 class="card-title">Campus Infrastructure</h3>
+                    <p class="card-text">Help us renovate dormitories, build new classroom facilities, and improve recreational spaces for student welfare and better learning environment.</p>
+                    <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                        <div style="background: linear-gradient(90deg, var(--light-blue), var(--accent-blue)); height: 100%; width: 42%; border-radius: 10px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; color: var(--gray-dark); font-weight: 600;">
+                        <span>₱2.1M of ₱5M</span>
+                        <span>42%</span>
+                    </div>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">Goal: ₱5 Million</p>
+                    <a href="#donation-form" class="btn btn-primary" style="width: 100%;">Contribute</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="background: linear-gradient(135deg, var(--light-blue), var(--accent-blue)); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 2rem;">✝️</h3>
+                    </div>
+                    <h3 class="card-title">Formation Programs</h3>
+                    <p class="card-text">Enhance spiritual, academic, mental health, and character development programs for students. Support retreat programs and counseling services.</p>
+                    <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                        <div style="background: linear-gradient(90deg, var(--light-blue), var(--accent-blue)); height: 100%; width: 78%; border-radius: 10px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; color: var(--gray-dark); font-weight: 600;">
+                        <span>₱1.95M of ₱2.5M</span>
+                        <span>78%</span>
+                    </div>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">Goal: ₱2.5 Million</p>
+                    <a href="#donation-form" class="btn btn-primary" style="width: 100%;">Contribute</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="background: linear-gradient(135deg, var(--light-blue), var(--accent-blue)); color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-bottom: 1.5rem;">
+                        <h3 style="margin: 0; font-size: 2rem;">📚</h3>
+                    </div>
+                    <h3 class="card-title">Library & Technology</h3>
+                    <p class="card-text">Upgrade our library resources, purchase academic books, and invest in educational technology to provide students with modern learning tools.</p>
+                    <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                        <div style="background: linear-gradient(90deg, var(--light-blue), var(--accent-blue)); height: 100%; width: 55%; border-radius: 10px;"></div>
+                    </div>
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 1.5rem; color: var(--gray-dark); font-weight: 600;">
+                        <span>₱1.65M of ₱3M</span>
+                        <span>55%</span>
+                    </div>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">Goal: ₱3 Million</p>
+                    <a href="#donation-form" class="btn btn-primary" style="width: 100%;">Contribute</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Donation Methods</h2>
+                <p>Choose the most convenient way for you to give</p>
+            </div>
+
+            <div class="grid">
+                <div class="card fade-in-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🏦</div>
+                        <h3 class="card-title">Bank Transfer</h3>
+                    </div>
+                    <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        <p style="margin: 0.5rem 0;"><strong>Bank:</strong> Philippine National Bank</p>
+                        <p style="margin: 0.5rem 0;"><strong>Account Name:</strong> MHCS Foundation, Inc.</p>
+                        <p style="margin: 0.5rem 0;"><strong>Account No:</strong> 160012789345</p>
+                        <p style="margin: 0.5rem 0;"><strong>Branch:</strong> Manila Main Branch</p>
+                    </div>
+                    <p class="card-text" style="margin-bottom: 1rem;">Direct bank transfer for donations. Please email us the transaction receipt for acknowledgment and tax purposes.</p>
+                    <a href="mailto:donations@mhcsalumni.org" class="btn btn-secondary" style="width: 100%;">Send Receipt</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📱</div>
+                        <h3 class="card-title">GCash / Mobile Wallet</h3>
+                    </div>
+                    <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        <p style="margin: 0.5rem 0;"><strong>GCash Name:</strong> MHCS Foundation, Inc.</p>
+                        <p style="margin: 0.5rem 0;"><strong>Account:</strong> +63 917 123 4567</p>
+                        <p style="margin: 0.5rem 0;"><strong>Method:</strong> Send Money / Direct Link</p>
+                    </div>
+                    <p class="card-text" style="margin-bottom: 1rem;">Fast and convenient mobile payment. Scan code or tap link to send directly to our GCash account.</p>
+                    <a href="https://app.gcash.com/send-money" target="_blank" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.5rem;">Open GCash App</a>
+                    <a href="https://p.co/917MHCS" target="_blank" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #00A8E8, #0078D4);">Send via GCash Link</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">💳</div>
+                        <h3 class="card-title">Credit Card / PayPal</h3>
+                    </div>
+                    <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        <p style="margin: 0.5rem 0;"><strong>Payment Provider:</strong> PayPal / Stripe</p>
+                        <p style="margin: 0.5rem 0;"><strong>Secure Processing:</strong> 256-bit SSL Encryption</p>
+                        <p style="margin: 0.5rem 0;"><strong>Tax Receipt:</strong> Automatic email receipt</p>
+                    </div>
+                    <p class="card-text" style="margin-bottom: 1rem;">Secure international payment platform. We accept all major credit cards and PayPal accounts. Instant tax receipt via email.</p>
+                    <a href="https://www.paypal.me/MHCSFoundation" target="_blank" class="btn btn-secondary" style="width: 100%; margin-bottom: 0.5rem;">PayPal.me Link</a>
+                    <a href="https://www.paypal.com/donate/?hosted_button_id=MHCSALUMNI2026" target="_blank" class="btn btn-primary" style="width: 100%; background: linear-gradient(135deg, #0070BA, #003087);">Donate via PayPal</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">📬</div>
+                        <h3 class="card-title">Check by Mail</h3>
+                    </div>
+                    <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        <p style="margin: 0.5rem 0;"><strong>Make checks payable to:</strong> MHCS Foundation, Inc.</p>
+                        <p style="margin: 0.5rem 0;"><strong>Mail to:</strong><br>Development Office<br>123 Seminary Road, Makati City 1200<br>Philippines</p>
+                    </div>
+                    <p class="card-text" style="margin-bottom: 1rem;">Traditional method. Please include your contact information with your check for proper acknowledgment.</p>
+                    <a href="contact.html" class="btn btn-secondary" style="width: 100%;">Get Address</a>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="text-align: center; margin-bottom: 2rem;">
+                        <div style="font-size: 3rem; margin-bottom: 1rem;">🎁</div>
+                        <h3 class="card-title">In-Kind Donations</h3>
+                    </div>
+                    <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                        <p style="margin: 0.5rem 0;"><strong>Accepted Items:</strong> Books, educational materials, equipment</p>
+                        <p style="margin: 0.5rem 0;"><strong>Contact:</strong> donations@mhcsalumni.org</p>
+                    </div>
+                    <p class="card-text" style="margin-bottom: 1rem;">Donate goods and services directly. Please contact our office for current needs and donation procedures.</p>
+                    <a href="mailto:donations@mhcsalumni.org" class="btn btn-secondary" style="width: 100%;">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-bg fade-in-section">
+            </div>
+
+            <form id="donation-form" class="card" style="max-width: 600px; margin: 0 auto;">
+                <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 2rem; text-align: center;">
+                    <p style="margin: 0; font-weight: 600; color: var(--primary-blue);">Every donation, no matter the amount, makes a meaningful difference.</p>
+                </div>
+
+                <div class="form-group">
+                    <label for="donor-name">Full Name *</label>
+                    <input type="text" id="donor-name" name="donor_name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="donor-email">Email Address *</label>
+                    <input type="email" id="donor-email" name="donor_email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="donor-phone">Phone Number</label>
+                    <input type="tel" id="donor-phone" name="donor_phone">
+                </div>
+
+                <div class="form-group">
+                    <label for="project">Which project would you like to support? *</label>
+                    <select id="project" name="project" required>
+                        <option value="">Select a project</option>
+                        <option value="scholarship">Seminary Scholarship Fund</option>
+                        <option value="infrastructure">Campus Infrastructure</option>
+                        <option value="formation">Formation Programs</option>
+                        <option value="library">Library & Technology</option>
+                        <option value="general">General Fund</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Donation Amount *</label>
+                    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; margin-bottom: 1rem;">
+                        <button type="button" class="btn btn-outline" style="padding: 1rem;">₱1,000</button>
+                        <button type="button" class="btn btn-outline" style="padding: 1rem;">₱5,000</button>
+                        <button type="button" class="btn btn-outline" style="padding: 1rem;">₱10,000</button>
+                        <button type="button" class="btn btn-outline" style="padding: 1rem;">₱25,000</button>
+                    </div>
+                    <input type="number" id="custom-amount" name="amount" min="100" placeholder="Or enter custom amount" required style="border: 2px solid var(--accent-blue); padding: 1rem; width: 100%; border-radius: 8px; font-size: 1rem;">
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="recurring" name="recurring">
+                    <label for="recurring" style="display: inline; cursor: pointer; margin-left: 0.5rem;">I would like to make this a monthly donation</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="checkbox" id="anonymous" name="anonymous">
+                    <label for="anonymous" style="display: inline; cursor: pointer; margin-left: 0.5rem;">Keep my donation anonymous</label>
+                </div>
+
+                <div class="form-group">
+                    <label for="message-donation">Message (Optional)</label>
+                    <textarea id="message-donation" name="message" placeholder="Any special message or intention?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width: 100%; padding: 1.2rem;">Proceed to Payment</button>
+            </form>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Donor Recognition & Transparency</h2>
+                <p>We honor our generous supporters and maintain complete financial transparency</p>
+            </div>
+
+            <div class="grid">
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Donor Recognition</h3>
+                    <p class="card-text">Donors above certain levels (unless anonymous) will be recognized in our annual report, website, and special events. Your generosity helps us maintain excellent standards.</p>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Tax Benefits</h3>
+                    <p class="card-text">MHCS Foundation is a registered non-profit organization. Your donation is tax-deductible. We will provide an official tax receipt for your records.</p>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Financial Reports</h3>
+                    <p class="card-text">We publish annual financial reports detailing how donations are utilized. Access our transparency reports and see the real-world impact of your contribution.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MHCS Alumni</h3>
+                <p>Connecting our global community of graduates.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" class="social-link">f</a>
+                    <a href="https://www.twitter.com" class="social-link">𝕏</a>
+                    <a href="https://www.instagram.com" class="social-link">📷</a>
+                    <a href="https://www.youtube.com" class="social-link">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="reunions.html">Reunions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="contact.html">Report an Issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mary Help of Christians Seminary Alumni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Direct hamburger click handler - ensure it works
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+                
+                hamburger.ontouchend = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+            }
+        });
+        
+        // ===== UPDATE AUTH BUTTONS BASED ON LOGIN STATUS =====
+        function updateAuthButtons() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            if (isLoggedIn) {
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (signupBtn) signupBtn.style.display = 'none';
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'block';
+                    logoutBtn.onclick = (e) => {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            } else {
+                if (loginBtn) loginBtn.style.display = 'block';
+                if (signupBtn) signupBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateAuthButtons);
+        setInterval(updateAuthButtons, 1000);
+    </script>
+</body>
+</html>
