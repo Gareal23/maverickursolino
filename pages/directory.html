@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alumni Directory - MHCS Alumni</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/visibility-fix.css">
+    <link rel="stylesheet" href="../css/responsive-enhanced.css">
+    <link rel="stylesheet" href="../css/mobile-responsive.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="../assets/logo mhcs.png" alt="MHCS Logo" style="height: 50px; width: auto;">
+                <span>MHCS Alumni</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html" class="active">Directory</a></li>
+                <li><a href="../index.html#reunions">Reunions</a></li>
+                <li><a href="donate.html">Give Back</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons" style="display: flex; gap: 10px;">
+                <a href="../login.html" id="loginBtn" class="cta-button" style="background-color: #667eea; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s;">Log In</a>
+                <a href="../login.html?tab=register" id="signupBtn" class="cta-button" style="background-color: #0066ff; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid white;">Sign Up</a>
+                <button id="logoutBtn" class="cta-button" style="background-color: #e74c3c; padding: 10px 20px; border-radius: 5px; color: white; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: none;">Logout</button>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section style="background: linear-gradient(135deg, #003d7a, #0056b3); color: white; padding: 4rem 2rem; margin-top: 0; padding-top: calc(4rem + 70px);">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Alumni Directory</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Connect with thousands of MHCS graduates worldwide</p>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div style="margin-top: 3rem;">
+                <h2 style="color: var(--primary-blue); margin-bottom: 2rem;">Alumni Directory</h2>
+                
+                <!-- Filter Card -->
+                <div class="card" style="margin-bottom: 2rem;">
+                    <h3 class="card-title">Search & Filter</h3>
+                    <form id="filter-form">
+                        <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem;">
+                            <div class="form-group">
+                                <label for="search-name">Name</label>
+                                <input type="text" id="search-name" placeholder="Enter full name">
+                            </div>
+                            <div class="form-group">
+                                <label for="batch-search">Batch Year</label>
+                                <input type="number" id="batch-search" min="1950" max="2099" placeholder="e.g., 2020">
+                            </div>
+                            <div class="form-group">
+                                <label for="profession-search">Profession</label>
+                                <input type="text" id="profession-search" placeholder="e.g., Doctor, Teacher">
+                            </div>
+                        </div>
+                        <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+                            <button type="button" class="btn btn-primary" style="flex: 1; cursor: pointer;">Filter Results</button>
+                            <button type="button" id="clear-filters" class="btn btn-secondary" style="flex: 1; cursor: pointer; background: white; color: var(--primary-blue); border: 2px solid var(--accent-blue);">Clear</button>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Alumni List Header -->
+                <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between; align-items: center;">
+                    <h3 style="color: var(--primary-blue); margin: 0;">All Alumni Members (<span id="alumni-count">0</span>)</h3>
+                </div>
+
+                <div id="alumni-list" style="display: grid; grid-template-columns: 1fr; gap: 1.5rem;"></div>
+            </div>
+        </div>
+    </section>
+
+    <style>
+        /* Responsive alumini cards */
+        @media (max-width: 768px) {
+            .card {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Alumni Chapters</h2>
+                <p>Connect with alumni in your region</p>
+            </div>
+            <div class="grid">
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Metro Manila Chapter</h3>
+                    <p class="card-text">Based in the National Capital Region. Monthly meetups and quarterly events. Over 500 active members.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Ramon Lopez</p>
+                    <a href="mailto:mm.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Visayas Chapter</h3>
+                    <p class="card-text">Serving Cebu, Bacolod, and surrounding provinces. Regular spiritual retreats and community outreach programs.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Teresa Gonzales</p>
+                    <a href="mailto:visayas.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Mindanao Chapter</h3>
+                    <p class="card-text">Covering Davao, Cagayan de Oro, and nearby areas. Active in social justice and education advocacy.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Miguel Santos</p>
+                    <a href="mailto:mindanao.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Southeast Asia Chapter</h3>
+                    <p class="card-text">International presence in Singapore, Malaysia, and Thailand. Annual international reunion and networking.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Patricia Reyes</p>
+                    <a href="mailto:intl.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">North America Chapter</h3>
+                    <p class="card-text">Serving alumni in USA and Canada. Faith-based community building and cultural preservation.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Victor Martinez</p>
+                    <a href="mailto:na.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Europe Chapter</h3>
+                    <p class="card-text">Connecting MHCS alumni across Europe. Annual summer gathering and networking opportunities.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600; margin-bottom: 1rem;">President: Isabella Fernandez</p>
+                    <a href="mailto:europe.chapter@mhcsalumni.org" class="card-link">Join Chapter →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MHCS Alumni</h3>
+                <p>Connecting our global community of graduates.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" class="social-link">f</a>
+                    <a href="https://www.twitter.com" class="social-link">𝕏</a>
+                    <a href="https://www.instagram.com" class="social-link">📷</a>
+                    <a href="https://www.youtube.com" class="social-link">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="reunions.html">Reunions</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="contact.html">Report an Issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mary Help of Christians Seminary Alumni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ===== ALUMNI DATABASE =====
+        const alumniDatabase = [
+            { id: 1, name: 'Maria Santos', batch: 2024, profession: 'Doctor', email: 'maria.santos@email.com', phone: '+63 917 123 4567', location: 'Manila' },
+            { id: 2, name: 'Jose Cruz', batch: 2014, profession: 'Engineer', email: 'jose.cruz@email.com', phone: '+63 927 234 5678', location: 'Quezon City' },
+            { id: 3, name: 'Ana Garcia', batch: 2004, profession: 'Teacher', email: 'ana.garcia@email.com', phone: '+63 917 890 1234', location: 'Makati' },
+            { id: 4, name: 'Ramon Lopez', batch: 2019, profession: 'Businessman', email: 'ramon.lopez@email.com', phone: '+63 928 345 6789', location: 'Pasig' },
+            { id: 5, name: 'Teresa Gonzales', batch: 2009, profession: 'Lawyer', email: 'teresa.gonzales@email.com', phone: '+63 917 456 7890', location: 'Manila' },
+            { id: 6, name: 'Miguel Santos', batch: 2015, profession: 'Accountant', email: 'miguel.santos@email.com', phone: '+63 929 567 8901', location: 'Cebu' },
+            { id: 7, name: 'Patricia Reyes', batch: 2012, profession: 'Doctor', email: 'patricia.reyes@email.com', phone: '+63 917 678 9012', location: 'Singapore' },
+            { id: 8, name: 'Victor Martinez', batch: 2008, profession: 'Engineer', email: 'victor.martinez@email.com', phone: '+63 926 789 0123', location: 'BGC' },
+            { id: 9, name: 'Isabella Fernandez', batch: 2018, profession: 'Architect', email: 'isabella.fernandez@email.com', phone: '+63 917 890 1234', location: 'Barcelona' },
+            { id: 10, name: 'Juan Dela Cruz', batch: 2020, profession: 'Nurse', email: 'juan.delacruz@email.com', phone: '+63 928 901 2345', location: 'Manila' },
+            { id: 11, name: 'Rosa Medina', batch: 2016, profession: 'Software Developer', email: 'rosa.medina@email.com', phone: '+63 917 012 3456', location: 'Davao' },
+            { id: 12, name: 'Carlos Rodriguez', batch: 2011, profession: 'Business Manager', email: 'carlos.rodriguez@email.com', phone: '+63 929 234 5678', location: 'Makati' },
+            { id: 13, name: 'Laura Fernandez', batch: 2022, profession: 'Marketing Manager', email: 'laura.fernandez@email.com', phone: '+63 917 123 4567', location: 'Quezon City' },
+            { id: 14, name: 'Fernando Santos', batch: 2010, profession: 'Physician', email: 'fernando.santos@email.com', phone: '+63 926 345 6789', location: 'Manila' },
+            { id: 15, name: 'Monica Reyes', batch: 2017, profession: 'Counselor', email: 'monica.reyes@email.com', phone: '+63 917 456 7890', location: 'Antipolo' }
+        ];
+
+        // ===== DISPLAY ALUMNI LIST =====
+        const displayAlumni = (alumniList = alumniDatabase) => {
+            const alumniListContainer = document.getElementById('alumni-list');
+            const countSpan = document.getElementById('alumni-count');
+
+            if (!alumniListContainer) {
+                console.error('Alumni list container not found');
+                return;
+            }
+
+            countSpan.textContent = alumniList.length;
+            alumniListContainer.innerHTML = '';
+
+            if (alumniList.length === 0) {
+                alumniListContainer.innerHTML = `
+                    <div style="text-align: center; padding: 3rem 2rem; color: #999; background: #f8f9fa; border-radius: 8px;">
+                        <p style="font-size: 1.1rem; margin: 0;">No alumni found matching your criteria.</p>
+                        <p style="font-size: 0.9rem; margin-top: 0.5rem;">Try adjusting your search filters.</p>
+                    </div>
+                `;
+                return;
+            }
+
+            alumniList.forEach((alumni, index) => {
+                const alumniCard = document.createElement('div');
+                alumniCard.className = 'card fade-in-section';
+                alumniCard.style.cssText = `
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 1.5rem;
+                    align-items: center;
+                    animation: slideInUp 0.3s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+                    animation-delay: ${index * 0.05}s;
+                `;
+
+                alumniCard.innerHTML = `
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin: 0 0 0.75rem 0; font-size: 1.1rem;">${alumni.name}</h4>
+                        <div style="display: flex; flex-direction: column; gap: 0.5rem; color: #666; font-size: 0.95rem;">
+                            <p style="margin: 0;"><strong>📅 Batch:</strong> ${alumni.batch}</p>
+                            <p style="margin: 0;"><strong>💼 Profession:</strong> ${alumni.profession}</p>
+                            <p style="margin: 0;"><strong>📍 Location:</strong> ${alumni.location}</p>
+                        </div>
+                    </div>
+                    <div style="background: #f8f9fa; padding: 1.5rem; border-radius: 6px; border-left: 3px solid var(--accent-blue);">
+                        <p style="margin: 0 0 0.5rem 0; color: #666; font-size: 0.85rem; font-weight: 600;">📧 Email</p>
+                        <p style="margin: 0 0 1.5rem 0; color: var(--primary-blue); font-weight: 600; word-break: break-all; font-size: 0.95rem;">${alumni.email}</p>
+                        <p style="margin: 0 0 0.5rem 0; color: #666; font-size: 0.85rem; font-weight: 600;">📞 Phone</p>
+                        <p style="margin: 0; color: var(--primary-blue); font-weight: 600; font-size: 0.95rem;">${alumni.phone}</p>
+                    </div>
+                `;
+
+                alumniListContainer.appendChild(alumniCard);
+            });
+        };
+
+        // ===== FILTER ALUMNI =====
+        const setupFilterSearch = () => {
+            const filterBtn = document.querySelector('#filter-form button[type="button"]:first-child');
+            const clearBtn = document.getElementById('clear-filters');
+            const nameInput = document.getElementById('search-name');
+            const batchInput = document.getElementById('batch-search');
+            const professionInput = document.getElementById('profession-search');
+
+            if (!filterBtn) {
+                console.error('Filter button not found');
+                return;
+            }
+
+            const applyFilter = () => {
+                const nameQuery = nameInput.value.toLowerCase().trim();
+                const batchQuery = batchInput.value.trim();
+                const professionQuery = professionInput.value.toLowerCase().trim();
+
+                const filtered = alumniDatabase.filter(alumni => {
+                    const nameMatch = !nameQuery || alumni.name.toLowerCase().includes(nameQuery);
+                    const batchMatch = !batchQuery || alumni.batch.toString() === batchQuery;
+                    const professionMatch = !professionQuery || alumni.profession.toLowerCase().includes(professionQuery);
+                    return nameMatch && batchMatch && professionMatch;
+                });
+
+                displayAlumni(filtered);
+            };
+
+            // Filter button click
+            filterBtn.addEventListener('click', (e) => {
+                e.preventDefault();
+                applyFilter();
+            });
+
+            // Real-time filtering on input
+            [nameInput, batchInput, professionInput].forEach(input => {
+                input.addEventListener('input', applyFilter);
+                input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        applyFilter();
+                    }
+                });
+            });
+
+            // Clear button
+            if (clearBtn) {
+                clearBtn.addEventListener('click', () => {
+                    nameInput.value = '';
+                    batchInput.value = '';
+                    professionInput.value = '';
+                    displayAlumni(alumniDatabase);
+                });
+            }
+        };
+
+        // ===== INITIALIZE =====
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('Directory page loaded, initializing alumni display');
+            displayAlumni();
+            setupFilterSearch();
+        });
+
+        // Fallback if DOM already loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                displayAlumni();
+                setupFilterSearch();
+            });
+        } else {
+            displayAlumni();
+            setupFilterSearch();
+        }
+    </script>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/auth-check.js"></script>
+    
+    <script>
+        // ===== MOBILE MENU FUNCTIONALITY =====
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                if (navLinks) {
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                }
+            });
+
+            // Close menu when clicking on a nav link
+            const navItems = document.querySelectorAll('.nav-links li a');
+            navItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    if (navLinks) {
+                        navLinks.classList.remove('active');
+                        hamburger.classList.remove('active');
+                    }
+                });
+            });
+
+            // Close menu when clicking outside
+            document.addEventListener('click', (e) => {
+                if (navLinks && !navLinks.contains(e.target) && !hamburger.contains(e.target)) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+
+            // Close on ESC key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && navLinks) {
+                    navLinks.classList.remove('active');
+                    hamburger.classList.remove('active');
+                }
+            });
+        }
+
+        // ===== UPDATE AUTH BUTTONS BASED ON LOGIN STATUS =====
+        function updateAuthButtons() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            if (isLoggedIn) {
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (signupBtn) signupBtn.style.display = 'none';
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'block';
+                    logoutBtn.onclick = (e) => {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            } else {
+                if (loginBtn) loginBtn.style.display = 'block';
+                if (signupBtn) signupBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateAuthButtons);
+        setInterval(updateAuthButtons, 1000);
+    </script>
+</body>
+</html>

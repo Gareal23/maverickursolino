@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reunions & Events - MHCS Alumni</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/visibility-fix.css">
+    <link rel="stylesheet" href="../css/responsive-enhanced.css">
+    <link rel="stylesheet" href="../css/mobile-responsive.css">
+    <style>
+        /* Reunions section responsive design */
+        @media (max-width: 768px) {
+            .reunion-event-container {
+                display: block !important;
+                grid-template-columns: none !important;
+            }
+            
+            .reunion-date-box {
+                width: 100% !important;
+                margin-bottom: 1.5rem !important;
+            }
+            
+            /* Stack chair and co-chair on mobile */
+            .reunion-chairs-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="../assets/logo mhcs.png" alt="MHCS Logo" style="height: 50px; width: auto;">
+                <span>MHCS Alumni</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="reunions.html" class="active">Reunions</a></li>
+                <li><a href="donate.html">Give Back</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons" style="display: flex; gap: 10px;">
+                <a href="../login.html" id="loginBtn" class="cta-button" style="background-color: #667eea; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s;">Log In</a>
+                <a href="../login.html?tab=register" id="signupBtn" class="cta-button" style="background-color: #0066ff; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid white;">Sign Up</a>
+                <button id="logoutBtn" class="cta-button" style="background-color: #e74c3c; padding: 10px 20px; border-radius: 5px; color: white; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: none;">Logout</button>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section style="background: linear-gradient(135deg, #003d7a, #0056b3); color: white; padding: 4rem 2rem; padding-top: calc(4rem + 70px);">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Reunions & Events</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Celebrate with your batch and the MHCS community</p>
+        </div>
+    </section>
+
+    <section class="white-bg fade-in-section">
+                <p>Join us for memorable moments with your classmates and friends</p>
+            </div>
+
+            <div style="margin-top: 3rem;">
+                <div class="card fade-in-section" style="margin-bottom: 2rem; border-left: 5px solid var(--accent-blue);">
+                    <div class="reunion-event-container" style="display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: start;">
+                        <div class="reunion-date-box" style="background: linear-gradient(135deg, var(--light-blue), var(--accent-blue)); color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                            <h4 style="margin: 0; font-size: 2rem;">March</h4>
+                            <p style="margin: 0; font-size: 2.5rem; font-weight: bold;">15</p>
+                            <p style="margin: 0; font-size: 0.9rem;">2026</p>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Class of 2024 - First Anniversary Reunion</h2>
+                            <p style="margin-bottom: 1rem; color: var(--gray-dark);">One year after graduation! Join your classmates for a special evening of food, games, music, and nostalgic memories.</p>
+                            <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Event Details</h4>
+                                <p style="margin: 0.5rem 0;"><strong>📍 Venue:</strong> MHCS Grand Hall, Manila</p>
+                                <p style="margin: 0.5rem 0;"><strong>⏰ Time:</strong> 6:00 PM - 11:00 PM</p>
+                                <p style="margin: 0.5rem 0;"><strong>🎫 Fee:</strong> ₱1,500 per person (includes dinner & drinks)</p>
+                                <p style="margin: 0.5rem 0;"><strong>👤 Expected Attendees:</strong> 300+</p>
+                            </div>
+                            <div class="reunion-chairs-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Chair</h4>
+                                    <p style="margin: 0;">Antonio Reyes<br><small>antonio@email.com</small></p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Co-Chair</h4>
+                                    <p style="margin: 0;">Sofia Garcia<br><small>sofia@email.com</small></p>
+                                </div>
+                            </div>
+                            <a href="#register-form" class="btn btn-primary" style="margin-top: 1.5rem;">Register for This Event</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem; border-left: 5px solid var(--accent-blue);">
+                    <div class="reunion-event-container" style="display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: start;">
+                        <div class="reunion-date-box" style="background: linear-gradient(135deg, #0056b3, #0074d9); color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                            <h4 style="margin: 0; font-size: 2rem;">April</h4>
+                            <p style="margin: 0; font-size: 2.5rem; font-weight: bold;">05</p>
+                            <p style="margin: 0; font-size: 0.9rem;">2026</p>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Class of 2014 - Decade Celebration</h2>
+                            <p style="margin-bottom: 1rem; color: var(--gray-dark);">A milestone celebration! Reflect on the past decade, celebrate achievements, and reconnect with friends from your formation years.</p>
+                            <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Event Details</h4>
+                                <p style="margin: 0.5rem 0;"><strong>📍 Venue:</strong> Tagaytay Convention Center</p>
+                                <p style="margin: 0.5rem 0;"><strong>⏰ Time:</strong> 5:00 PM - 11:00 PM (Overnight)</p>
+                                <p style="margin: 0.5rem 0;"><strong>🎫 Fee:</strong> ₱2,500 per person (includes dinner & accommodation)</p>
+                                <p style="margin: 0.5rem 0;"><strong>👤 Expected Attendees:</strong> 200+</p>
+                            </div>
+                            <div class="reunion-chairs-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Chair</h4>
+                                    <p style="margin: 0;">Dr. Maria Cruz<br><small>maria.cruz@email.com</small></p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Co-Chair</h4>
+                                    <p style="margin: 0;">Juan Santos<br><small>juan.santos@email.com</small></p>
+                                </div>
+                            </div>
+                            <a href="#register-form" class="btn btn-primary" style="margin-top: 1.5rem;">Register for This Event</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem; border-left: 5px solid var(--accent-blue);">
+                    <div style="display: grid; grid-template-columns: 200px 1fr; gap: 2rem; align-items: start;">
+                        <div style="background: linear-gradient(135deg, #0074d9, #87ceeb); color: white; padding: 1.5rem; border-radius: 10px; text-align: center;">
+                            <h4 style="margin: 0; font-size: 2rem;">May</h4>
+                            <p style="margin: 0; font-size: 2.5rem; font-weight: bold;">10</p>
+                            <p style="margin: 0; font-size: 0.9rem;">2026</p>
+                        </div>
+                        <div>
+                            <h2 class="card-title">Class of 1974 - Golden Jubilee Celebration</h2>
+                            <p style="margin-bottom: 1rem; color: var(--gray-dark);">Honoring 50 years of service, faith, and friendship. A special gala dinner with recognition of outstanding contributions to the community and MHCS.</p>
+                            <div style="background: var(--light-accent); padding: 1.5rem; border-radius: 10px; margin-bottom: 1.5rem;">
+                                <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Event Details</h4>
+                                <p style="margin: 0.5rem 0;"><strong>📍 Venue:</strong> MHCS Cardinal's Hall, Manila</p>
+                                <p style="margin: 0.5rem 0;"><strong>⏰ Time:</strong> 6:00 PM - 10:00 PM (Black Tie)</p>
+                                <p style="margin: 0.5rem 0;"><strong>🎫 Fee:</strong> ₱2,000 per person (includes dinner)</p>
+                                <p style="margin: 0.5rem 0;"><strong>👤 Expected Attendees:</strong> 150+</p>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Chair</h4>
+                                    <p style="margin: 0;">Sr. Augustine Lopez<br><small>augustine@email.com</small></p>
+                                </div>
+                                <div>
+                                    <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Co-Chair</h4>
+                                    <p style="margin: 0;">Fr. Martin Fernandez<br><small>martin.fernandez@email.com</small></p>
+                                </div>
+                            </div>
+                            <a href="#register-form" class="btn btn-primary" style="margin-top: 1.5rem;">Register for This Event</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Frequently Asked Questions</h2>
+                <p>Get answers to common questions about our reunions and events</p>
+            </div>
+
+            <div style="max-width: 800px; margin: 0 auto;">
+                <div class="card fade-in-section" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-blue); cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        How do I register for a reunion?
+                        <span style="font-weight: bold;">+</span>
+                    </h4>
+                    <p style="margin-top: 1rem; display: none;">You can register online using the form below or contact your batch representative directly. Online registration is the fastest way to secure your spot.</p>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-blue); cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        What is included in the registration fee?
+                        <span style="font-weight: bold;">+</span>
+                    </h4>
+                    <p style="margin-top: 1rem; display: none;">The registration fee typically includes dinner, beverages, and program materials. Some events may include accommodation. Check the specific event details for what's included.</p>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-blue); cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        Can I bring a plus one?
+                        <span style="font-weight: bold;">+</span>
+                    </h4>
+                    <p style="margin-top: 1rem; display: none;">Yes! You can bring a guest. Please indicate this in your registration form. Additional fee applies for plus-ones (typically 50% of the registration fee).</p>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-blue); cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        What if I have special dietary requirements?
+                        <span style="font-weight: bold;">+</span>
+                    </h4>
+                    <p style="margin-top: 1rem; display: none;">Please indicate your dietary requirements during registration. We will do our best to accommodate vegetarian, vegan, and other dietary restrictions.</p>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 1.5rem;">
+                    <h4 style="color: var(--primary-blue); cursor: pointer; user-select: none; display: flex; justify-content: space-between; align-items: center;">
+                        Is there a refund policy?
+                        <span style="font-weight: bold;">+</span>
+                    </h4>
+                    <p style="margin-top: 1rem; display: none;">Cancellations made 30 days or more before the event are eligible for a full refund. Cancellations within 30 days are non-refundable but can be transferred to another person.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Registration Form</h2>
+            </div>
+            <form id="register-form" class="card" style="max-width: 600px; margin: 0 auto;">
+                <div class="form-group">
+                    <label for="name">Full Name *</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="batch">Batch Year *</label>
+                    <input type="number" id="batch" name="batch" min="1950" max="2099" required>
+                </div>
+                <div class="form-group">
+                    <label for="email-reg">Email Address *</label>
+                    <input type="email" id="email-reg" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone-reg">Phone Number *</label>
+                    <input type="tel" id="phone-reg" name="phone" required>
+                </div>
+                <div class="form-group">
+                    <label for="event">Which event would you like to attend? *</label>
+                    <select id="event" name="event" required>
+                        <option value="">Select an event</option>
+                        <option value="2024-reunion">Class of 2024 - First Anniversary (March 15)</option>
+                        <option value="2014-reunion">Class of 2014 - Decade Celebration (April 5)</option>
+                        <option value="1974-jubilee">Class of 1974 - Golden Jubilee (May 10)</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="attendees">Number of Attendees (including yourself) *</label>
+                    <input type="number" id="attendees" name="attendees" min="1" required>
+                </div>
+                <div class="form-group">
+                    <label for="dietary">Dietary Requirements</label>
+                    <input type="text" id="dietary" name="dietary" placeholder="e.g., Vegetarian, Gluten-free">
+                </div>
+                <div class="form-group">
+                    <label for="message">Additional Comments</label>
+                    <textarea id="message" name="message" placeholder="Any questions or special requests?"></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Complete Registration</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MHCS Alumni</h3>
+                <p>Connecting our global community of graduates.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" class="social-link">f</a>
+                    <a href="https://www.twitter.com" class="social-link">𝕏</a>
+                    <a href="https://www.instagram.com" class="social-link">📷</a>
+                    <a href="https://www.youtube.com" class="social-link">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="contact.html">Report an Issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mary Help of Christians Seminary Alumni. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Direct hamburger click handler - ensure it works
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+                
+                hamburger.ontouchend = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+            }
+        });
+        
+        // ===== UPDATE AUTH BUTTONS BASED ON LOGIN STATUS =====
+        function updateAuthButtons() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            if (isLoggedIn) {
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (signupBtn) signupBtn.style.display = 'none';
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'block';
+                    logoutBtn.onclick = (e) => {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            } else {
+                if (loginBtn) loginBtn.style.display = 'block';
+                if (signupBtn) signupBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateAuthButtons);
+        setInterval(updateAuthButtons, 1000);
+    </script>
+</body>
+</html>

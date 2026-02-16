@@ -1,0 +1,697 @@
+/* ===== MOBILE RESPONSIVENESS ENHANCEMENTS ===== */
+/* Optimizations for screens under 1024px */
+
+/* ===== CRITICAL: Force Hamburger Visibility on Mobile ===== */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex !important;
+        visibility: visible !important;
+        opacity: 1 !important;
+        pointer-events: auto !important;
+        z-index: 1002 !important;
+        position: relative !important;
+        cursor: pointer !important;
+        touch-action: manipulation !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
+    }
+    
+    .hamburger * {
+        pointer-events: none !important;
+    }
+    
+    .hamburger span {
+        display: block !important;
+        width: 28px !important;
+        height: 3px !important;
+    }
+    
+    .hamburger.active span:nth-child(1) {
+        transform: rotate(45deg) translate(8px, 8px) !important;
+    }
+    
+    .hamburger.active span:nth-child(2) {
+        opacity: 0 !important;
+    }
+    
+    .hamburger.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -7px) !important;
+    }
+}
+
+:root {
+    --local-primary: #0a3d62;
+    --local-secondary: #1e5f8f;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1024px) {
+    /* General spacing adjustments */
+    body {
+        font-size: 14px;
+    }
+    
+    /* Reduce padding on large containers */
+    section {
+        padding: 2rem 1rem !important;
+    }
+    
+    .container {
+        padding: 0 1rem;
+        max-width: 100%;
+    }
+    
+    /* Header adjustments */
+    header nav {
+        padding: 0.75rem 1rem;
+    }
+    
+    header {
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* Root font size adjustment */
+    html {
+        font-size: 13px;
+    }
+    
+    body {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    /* Hero section optimizations */
+    #home {
+        height: 100vh !important;
+        padding-top: 70px !important;
+        box-sizing: border-box !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.8rem !important;
+        line-height: 1.3;
+        margin-bottom: 0.75rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.95rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 0.75rem;
+        width: 100%;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.95rem;
+    }
+    
+    /* Featured Cards - Stack on mobile */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+    
+    .feature-item {
+        padding: 1.5rem !important;
+    }
+    
+    .feature-icon {
+        font-size: 2.5rem !important;
+        margin-bottom: 0.75rem;
+    }
+    
+    .feature-title {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-text {
+        font-size: 0.9rem;
+        line-height: 1.4;
+    }
+    
+    /* Project cards grid */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .project-card {
+        height: 300px !important;
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    /* Form improvements for mobile */
+    .auth-card {
+        padding: 1.5rem !important;
+        max-width: 100% !important;
+        border-radius: 16px;
+    }
+    
+    .auth-header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .auth-header img {
+        height: 60px !important;
+        margin-bottom: 0.75rem !important;
+    }
+    
+    .auth-header h1 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .auth-header p {
+        font-size: 0.95rem;
+    }
+    
+    /* Form inputs - Larger touch targets (44px minimum) */
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px 14px !important;
+        font-size: 16px !important;
+        height: auto !important;
+        min-height: 44px;
+        border-radius: 10px !important;
+    }
+    
+    .form-group label {
+        font-size: 0.95rem;
+        margin-bottom: 6px;
+    }
+    
+    .password-wrapper {
+        min-height: 44px;
+    }
+    
+    .password-wrapper input {
+        min-height: 44px;
+    }
+    
+    .toggle-password {
+        padding: 10px !important;
+    }
+    
+    /* Buttons - Touch-friendly size */
+    .btn,
+    .btn-submit,
+    .btn-secondary-full,
+    .btn-back {
+        padding: 14px 20px !important;
+        font-size: 15px;
+        min-height: 46px;
+        border-radius: 12px !important;
+    }
+    
+    .auth-form {
+        gap: 1.2rem !important;
+    }
+    
+    /* Modals */
+    .error-modal-content {
+        width: 95% !important;
+        padding: 1.5rem !important;
+        border-radius: 16px;
+    }
+    
+    .error-modal-header {
+        margin-bottom: 1rem;
+    }
+    
+    .error-modal-header h2 {
+        font-size: 1.2rem;
+    }
+    
+    .error-modal-body {
+        margin-bottom: 1rem;
+    }
+    
+    .error-modal-body p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 0.75rem;
+    }
+    
+    .error-modal-footer {
+        flex-direction: column;
+        gap: 0.75rem;
+    }
+    
+    .error-modal-btn {
+        width: 100%;
+        padding: 12px !important;
+        font-size: 0.95rem;
+    }
+    
+    /* Hamburger menu adjustments */
+    .hamburger {
+        display: flex !important;
+        width: 28px;
+        height: 24px;
+    }
+    
+    .hamburger span {
+        width: 100%;
+        height: 3px;
+    }
+    
+    /* Loading spinner - Center properly */
+    .loading-overlay {
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .loading-spinner {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .loading-text {
+        bottom: 20px;
+        font-size: 0.95rem;
+    }
+    
+    /* Directory/Contact pages */
+    .directory-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+    
+    .directory-card {
+        padding: 1.5rem !important;
+    }
+    
+    /* Login prompt modal */
+    #auth-overlay {
+        padding: 1rem !important;
+    }
+    
+    #auth-overlay > div {
+        padding: 1.5rem !important;
+        max-width: 95%;
+        border-radius: 16px;
+    }
+    
+    /* Forgot Password inline */
+    .forgot-password-inline {
+        font-size: 12px;
+        padding: 4px 0;
+        margin-top: 6px;
+    }
+    
+    /* Announcements section */
+    .announcement-item {
+        padding: 1.2rem !important;
+    }
+    
+    .announcement-item h3 {
+        font-size: 1rem;
+    }
+    
+    .announcement-item p {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* Adjust for very small screens */
+    html {
+        font-size: 12px;
+    }
+    
+    body {
+        font-size: 12px;
+    }
+    
+    /* Hero section - very compact */
+    #home {
+        min-height: 60vh !important;
+        padding: 2rem 0.75rem 3rem !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.4rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1.2rem;
+    }
+    
+    /* Hamburger menu adjustments */
+    .hamburger {
+        display: flex !important;
+        width: auto !important;
+        height: auto !important;
+        padding: 8px 12px !important;
+    }
+    
+    .hamburger span {
+        display: block !important;
+        width: 28px;
+        height: 3px;
+    }
+    
+    /* Mobile nav - remove conflicts with main styles */
+    /* Styles inherited from styles.css @media (max-width: 768px) */
+    
+    /* Buttons stacking */
+    .btn {
+        width: 100%;
+        padding: 12px 16px !important;
+        font-size: 0.95rem;
+    }
+    
+    .hero-buttons {
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .cta-buttons-group {
+        flex-direction: column !important;
+        gap: 0.75rem !important;
+        width: 100%;
+    }
+    
+    .cta-button {
+        width: 100%;
+        padding: 12px !important;
+    }
+    
+    /* Forms - Optimize for thumbs */
+    .form-group {
+        margin-bottom: 1rem !important;
+    }
+    
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 12px !important;
+        font-size: 16px !important;
+        min-height: 44px;
+        border-radius: 8px !important;
+    }
+    
+    .form-group label {
+        font-size: 0.9rem;
+        margin-bottom: 4px;
+    }
+    
+    .auth-card {
+        border-radius: 12px;
+        padding: 1.25rem !important;
+        margin: 0.75rem;
+    }
+    
+    .auth-header h1 {
+        font-size: 1.3rem;
+        margin-bottom: 0.3rem;
+    }
+    
+    .auth-header p {
+        font-size: 0.85rem;
+    }
+    
+    /* Buttons responsive */
+    .btn-submit,
+    .btn-secondary-full,
+    .btn-back {
+        width: 100%;
+        padding: 12px !important;
+        font-size: 0.95rem;
+        min-height: 44px;
+    }
+    
+    /* Features grid - single column */
+    .grid {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+        padding: 0 !important;
+    }
+    
+    .feature-item {
+        padding: 1.25rem !important;
+        text-align: center;
+    }
+    
+    .feature-icon {
+        font-size: 2rem !important;
+        margin-bottom: 0.5rem;
+    }
+    
+    .feature-title {
+        font-size: 1rem;
+    }
+    
+    .feature-text {
+        font-size: 0.85rem;
+    }
+    
+    /* Error/Success messages */
+    .error-message,
+    .register-error,
+    .forgot-message,
+    .reset-message {
+        padding: 12px 14px !important;
+        margin-bottom: 1rem !important;
+        font-size: 0.9rem;
+        border-radius: 8px !important;
+    }
+    
+    /* Modal adjustments */
+    .error-modal-content {
+        width: 90vw !important;
+        max-width: 100%;
+        padding: 1.2rem !important;
+        border-radius: 12px !important;
+    }
+    
+    .error-modal-header h2 {
+        font-size: 1.1rem;
+        margin-bottom: 0.75rem;
+    }
+    
+    .error-modal-body p {
+        font-size: 0.9rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .error-modal-footer {
+        flex-direction: column;
+        gap: 0.5rem;
+        margin-top: 1rem;
+    }
+    
+    .error-modal-btn {
+        width: 100%;
+        padding: 11px !important;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+    
+    /* Projects section */
+    .projects-grid {
+        grid-template-columns: 1fr !important;
+        gap: 1.25rem;
+        padding: 1rem 0.75rem !important;
+    }
+    
+    .project-card {
+        height: 250px !important;
+        border-radius: 12px !important;
+    }
+    
+    .project-overlay {
+        padding: 1rem !important;
+    }
+    
+    .project-info h3 {
+        font-size: 1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.85rem;
+    }
+    
+    /* Filter buttons */
+    .filter-buttons {
+        column-gap: 0.5rem !important;
+        row-gap: 0.5rem !important;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .filter-btn {
+        padding: 8px 12px !important;
+        font-size: 0.85rem;
+        min-height: 40px;
+    }
+    
+    /* Announcements */
+    .announcement-item {
+        padding: 1rem !important;
+        margin-bottom: 1rem !important;
+    }
+    
+    .announcement-item h3 {
+        font-size: 0.95rem;
+        margin-bottom: 0.4rem;
+    }
+    
+    .announcement-item p {
+        font-size: 0.85rem;
+        line-height: 1.4;
+    }
+    
+    /* Spacing utilities */
+    .mb-1 {
+        margin-bottom: 0.5rem !important;
+    }
+    
+    .p-1 {
+        padding: 0.75rem !important;
+    }
+    
+    /* Sections padding */
+    section {
+        padding: 1.5rem 0.75rem !important;
+    }
+    
+    /* Hide non-essential elements on very small screens */
+    .hide-mobile {
+        display: none !important;
+    }
+    
+    /* Expand clickable areas */
+    a, button {
+        min-width: 44px;
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+/* Landscape phone adjustments */
+@media screen and (max-height: 500px) and (landscape) {
+    #home {
+        min-height: 100vh !important;
+        padding: 1.5rem !important;
+    }
+    
+    .hero-content h1 {
+        font-size: 1.5rem !important;
+    }
+    
+    .hero-content p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .hero-buttons {
+        gap: 0.5rem;
+    }
+}
+
+/* Tablet optimizations (768px to 1024px) */
+@media screen and (min-width: 600px) and (max-width: 899px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .directory-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    .auth-card {
+        max-width: 450px;
+        margin: auto;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase button sizes for touch */
+    button, a.btn, input[type="submit"] {
+        padding: 14px 20px !important;
+        min-height: 48px !important;
+        font-size: 16px !important;
+    }
+    
+    /* Remove hover states that don't work well on touch */
+    .btn-hover { 
+        background: none !important;
+    }
+    
+    /* Increase focus/active areas */
+    .toggle-password {
+        width: 44px !important;
+        height: 44px !important;
+        margin-left: 0.5rem;
+    }
+}
+
+/* Safe area insets for notched devices */
+@supports (padding: max(0px)) {
+    body {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+    
+    header nav {
+        padding-left: max(1rem, env(safe-area-inset-left));
+        padding-right: max(1rem, env(safe-area-inset-right));
+    }
+}
+
+/* Print media optimizations */
+@media print {
+    .hamburger,
+    .nav-links,
+    .error-modal-overlay,
+    .loading-overlay,
+    .cta-buttons-group {
+        display: none !important;
+    }
+    
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .auth-card {
+        box-shadow: none;
+        border: 1px solid #ccc;
+    }
+}
