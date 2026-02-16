@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - MHCS Seminary</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="../css/visibility-fix.css">
+    <link rel="stylesheet" href="../css/responsive-enhanced.css">
+    <link rel="stylesheet" href="../css/mobile-responsive.css"></head>
+<body>
+    <header>
+        <nav>
+            <a href="../index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="../assets/logo mhcs.png" alt="MHCS Logo" style="height: 50px; width: auto;">
+                <span>MHCS Alumni</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="reunions.html">Reunions</a></li>
+                <li><a href="donate.html">Give Back</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="auth-buttons" style="display: flex; gap: 10px;">
+                <a href="../login.html" id="loginBtn" class="cta-button" style="background-color: #667eea; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s;">Log In</a>
+                <a href="../login.html?tab=register" id="signupBtn" class="cta-button" style="background-color: #0066ff; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid white;">Sign Up</a>
+                <button id="logoutBtn" class="cta-button" style="background-color: #e74c3c; padding: 10px 20px; border-radius: 5px; color: white; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: none;">Logout</button>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </nav>
+    </header>
+
+    <section style="background: linear-gradient(135deg, #003d7a, #0056b3); color: white; padding: 4rem 2rem; padding-top: calc(4rem + 70px);">
+        <div class="container" style="text-align: center;">
+            <h1 style="font-size: 3rem; margin-bottom: 1rem;">Admissions</h1>
+            <p style="font-size: 1.2rem; opacity: 0.9;">Join our community of faith and formation</p>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admission Process</h2>
+                <p>Step-by-step guide to apply to MHCS Seminary</p>
+            </div>
+
+            <div style="margin-top: 3rem; max-width: 900px; margin-left: auto; margin-right: auto;">
+                <div class="card fade-in-section" style="margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">1</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Preparation & Discernment</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">Take time to pray and discern your vocation. Consult with your spiritual director, family, and parish priest about your interest in seminary formation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">2</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Obtain Application Materials</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">Request an application packet from the Admissions Office or download it from our website. Review all requirements and gather necessary documents.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">3</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Complete Application</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">Submit your completed application form, essay, and required documents by the deadline. Ensure all sections are filled out completely and accurately.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">4</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Interview & Assessment</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">Qualified applicants will be invited for interviews, psychological testing, and medical examination. These assessments help us understand your readiness for seminary life.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section" style="margin-bottom: 2rem;">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">5</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Formation Team Review</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">The Admissions and Formation team reviews all materials and assessments to determine your candidacy for seminary formation.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card fade-in-section">
+                    <div style="display: flex; gap: 2rem; align-items: flex-start;">
+                        <div style="width: 50px; height: 50px; background: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-weight: bold; font-size: 1.5rem; flex-shrink: 0;">6</div>
+                        <div>
+                            <h3 class="card-title" style="margin-top: 0;">Final Decision & Enrollment</h3>
+                            <p style="margin: 0; color: var(--gray-dark);">Accepted candidates receive an admission letter and further instructions for enrollment. We will guide you through the registration and orientation process.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Admission Requirements</h2>
+                <p>What we look for in our candidates</p>
+            </div>
+
+            <div class="grid">
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Academic Requirements</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>High School Diploma or equivalent</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Satisfactory academic record</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>English language proficiency</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>College entrance exam results</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Spiritual Requirements</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Active Catholic faith and practice</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Clear vocation to priesthood</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Regular participation in sacraments</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Demonstrated commitment to service</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Personal Qualities</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Emotional and psychological maturity</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Good moral character</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Ability to live in community</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Leadership potential and pastoral sensitivity</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card fade-in-section">
+                    <h3 class="card-title">Health & Legal</h3>
+                    <ul style="list-style: none;">
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Good physical and mental health</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Valid health certificate</span>
+                        </li>
+                        <li style="margin-bottom: 0.75rem; display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Clean criminal record</span>
+                        </li>
+                        <li style="display: flex; gap: 0.5rem;">
+                            <span style="color: var(--accent-blue);">✓</span>
+                            <span>Financial stability to cover tuition</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Application Documents Checklist</h2>
+            </div>
+
+            <div class="card fade-in-section" style="max-width: 600px; margin: 0 auto;">
+                <ul style="list-style: none;">
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Completed application form</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>High school transcript</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>College entrance exam results</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Personal essay (2-3 pages)</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Letters of recommendation (3)</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Letter from parish priest</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Health certificate</span>
+                    </li>
+                    <li style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid var(--gray-200); display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Copy of valid ID/birth certificate</span>
+                    </li>
+                    <li style="display: flex; gap: 1rem;">
+                        <input type="checkbox" style="cursor: pointer;">
+                        <span>Application fee payment receipt</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="light-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Download Application Materials</h2>
+            </div>
+
+            <div class="grid">
+                <a href="#" class="card fade-in-section" style="text-decoration: none; cursor: pointer;">
+                    <h3 class="card-title" style="margin-top: 0;">📄 Application Form</h3>
+                    <p class="card-text">Official MHCS application form - complete all sections carefully.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600;">Download PDF</p>
+                </a>
+                <a href="#" class="card fade-in-section" style="text-decoration: none; cursor: pointer;">
+                    <h3 class="card-title" style="margin-top: 0;">📋 Requirements Checklist</h3>
+                    <p class="card-text">Complete checklist of all required documents and information.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600;">Download PDF</p>
+                </a>
+                <a href="#" class="card fade-in-section" style="text-decoration: none; cursor: pointer;">
+                    <h3 class="card-title" style="margin-top: 0;">✉️ Letter of Recommendation</h3>
+                    <p class="card-text">Template letter for recommenders to use when submitting recommendations.</p>
+                    <p style="color: var(--accent-blue); font-weight: 600;">Download PDF</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="white-bg">
+        <div class="container">
+            <div class="section-title">
+                <h2>Important Dates & Deadlines</h2>
+            </div>
+
+            <div class="card fade-in-section" style="max-width: 600px; margin: 0 auto;">
+                <table style="width: 100%; text-align: left;">
+                    <tr style="border-bottom: 1px solid var(--gray-200);">
+                        <td style="padding: 1rem; color: var(--primary-blue); font-weight: 600;">Application Opens</td>
+                        <td style="padding: 1rem;">September 1</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--gray-200);">
+                        <td style="padding: 1rem; color: var(--primary-blue); font-weight: 600;">Regular Deadline</td>
+                        <td style="padding: 1rem;">January 31</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--gray-200);">
+                        <td style="padding: 1rem; color: var(--primary-blue); font-weight: 600;">Late Deadline</td>
+                        <td style="padding: 1rem;">March 31 (if spaces available)</td>
+                    </tr>
+                    <tr style="border-bottom: 1px solid var(--gray-200);">
+                        <td style="padding: 1rem; color: var(--primary-blue); font-weight: 600;">Decision Period</td>
+                        <td style="padding: 1rem;">February - April</td>
+                    </tr>
+                    <tr>
+                        <td style="padding: 1rem; color: var(--primary-blue); font-weight: 600;">Program Begins</td>
+                        <td style="padding: 1rem;">August 1</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MHCS</h3>
+                <p>Mary Help of Christians Seminary</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" class="social-link">f</a>
+                    <a href="https://www.twitter.com" class="social-link">𝕏</a>
+                    <a href="https://www.instagram.com" class="social-link">📷</a>
+                    <a href="https://www.youtube.com" class="social-link">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="programs.html">Programs</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="contact.html">Report an Issue</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mary Help of Christians Seminary. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script>
+        // Direct hamburger click handler - ensure it works
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                hamburger.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+                
+                hamburger.ontouchend = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+            }
+        });
+        
+        // ===== UPDATE AUTH BUTTONS BASED ON LOGIN STATUS =====
+        function updateAuthButtons() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            if (isLoggedIn) {
+                if (loginBtn) loginBtn.style.display = 'none';
+                if (signupBtn) signupBtn.style.display = 'none';
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'block';
+                    logoutBtn.onclick = (e) => {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.href = '../index.html';
+                    };
+                }
+            } else {
+                if (loginBtn) loginBtn.style.display = 'block';
+                if (signupBtn) signupBtn.style.display = 'block';
+                if (logoutBtn) logoutBtn.style.display = 'none';
+            }
+        }
+        
+        document.addEventListener('DOMContentLoaded', updateAuthButtons);
+        setInterval(updateAuthButtons, 1000);
+    </script>
+</body>
+</html>

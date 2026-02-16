@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MHCS Alumni - Login Portal">
+    <title>Login - MHCS Alumni</title>
+    <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
+</head>
+<style>
+    
+    
+</style>
+<body>
+    <div class="auth-container">
+        <!-- Login Form -->
+        <div class="auth-card login-card" id="loginCard">
+            <div class="auth-header">
+                <h1>Welcome Back</h1>
+                <p>Sign in to your MHCS Alumni account</p>
+            </div>
+            
+            <form id="loginForm" class="auth-form">
+                <div class="form-group">
+                    <label for="emailOrUsername">Email or Username</label>
+                    <input 
+                        type="text" 
+                        id="emailOrUsername" 
+                        name="emailOrUsername"
+                        placeholder="Enter your email or username"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password"
+                            placeholder="Enter your password"
+                            required
+                        >
+                        <button type="button" class="toggle-password" id="togglePassword">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                    <button type="button" class="forgot-password-inline" id="forgotPasswordBtn">Forgot Password?</button>
+                </div>
+
+                <div class="error-message" id="errorMessage" style="display: none;"></div>
+
+                <button type="submit" class="btn-submit">Sign In</button>
+            </form>
+
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+
+            <button type="button" class="btn-secondary-full" id="createAccountBtn">Create New Account</button>
+            
+            <!-- Email Verification Info -->
+            <div style="background: rgba(52, 152, 219, 0.1); border-left: 4px solid #3498db; padding: 1rem; border-radius: 8px; margin: 1rem 0; font-size: 0.9rem; color: #2c3e50;">
+                <p style="margin: 0.25rem 0;"><strong>🔐 Email Verification:</strong></p>
+                <p style="margin: 0.25rem 0;">Need to reset your password? Click "Forgot Password?" to verify via email or Gmail.</p>
+            </div>
+
+            <div class="auth-footer">
+                <p>Back to <a href="index.html">Homepage</a></p>
+            </div>
+        </div>
+
+        <!-- Register Form -->
+        <div class="auth-card register-card" id="registerCard" style="display: none;">
+            <div class="auth-header">
+                <h1>Create Account</h1>
+                <p>Join the MHCS Alumni community</p>
+            </div>
+            
+            <form id="registerForm" class="auth-form">
+                <div class="form-group">
+                    <label for="firstName">First Name</label>
+                    <input 
+                        type="text" 
+                        id="firstName" 
+                        name="firstName"
+                        placeholder="Your first name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="lastName">Last Name</label>
+                    <input 
+                        type="text" 
+                        id="lastName" 
+                        name="lastName"
+                        placeholder="Your last name"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="regEmail">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="regEmail" 
+                        name="regEmail"
+                        placeholder="your.email@example.com"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="batch">Batch Year</label>
+                    <select id="batch" name="batch" required>
+                        <option value="">Select your batch</option>
+                        <option value="1990">1990</option>
+                        <option value="1995">1995</option>
+                        <option value="2000">2000</option>
+                        <option value="2005">2005</option>
+                        <option value="2010">2010</option>
+                        <option value="2015">2015</option>
+                        <option value="2020">2020</option>
+                        <option value="2024">2024</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="regPassword">Password</label>
+                    <input 
+                        type="password" 
+                        id="regPassword" 
+                        name="regPassword"
+                        placeholder="Create a strong password"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input 
+                        type="password" 
+                        id="confirmPassword" 
+                        name="confirmPassword"
+                        placeholder="Confirm your password"
+                        required
+                    >
+                </div>
+
+                <div class="register-error" id="registerError" style="display: none;"></div>
+
+                <button type="submit" class="btn-submit">Create Account</button>
+            </form>
+
+            <button type="button" class="btn-back" id="backToLoginBtn">Back to Login</button>
+        </div>
+
+        <!-- Forgot Password Form -->
+        <div class="auth-card forgot-card" id="forgotCard" style="display: none;">
+            <div class="auth-header">
+                <h1>Reset Password</h1>
+                <p>Enter your email to receive reset instructions</p>
+            </div>
+            
+            <form id="forgotForm" class="auth-form">
+                <div class="form-group">
+                    <label for="resetEmail">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="resetEmail" 
+                        name="resetEmail"
+                        placeholder="your.email@example.com"
+                        required
+                    >
+                </div>
+
+                <div class="forgot-message" id="forgotMessage" style="display: none;"></div>
+
+                <button type="submit" class="btn-submit">Send Reset Link</button>
+                
+                <!-- Email Verification Options -->
+                <div style="margin-top: 1.5rem; padding: 1rem; background: rgba(52, 152, 219, 0.08); border-radius: 8px; border-left: 4px solid #3498db;">
+                    <p style="margin: 0 0 0.75rem 0; font-weight: 600; color: #2c3e50; font-size: 0.95rem;">📧 Verification Options:</p>
+                    <a href="https://mail.google.com" target="_blank" style="display: inline-block; background: #ff5252; color: white; padding: 0.6rem 1rem; border-radius: 6px; text-decoration: none; font-weight: 600; transition: all 0.3s; margin-right: 0.5rem; font-size: 0.9rem;">Gmail</a>
+                </div>
+            </form>
+
+            <button type="button" class="btn-back" id="backToLoginBtn2">Back to Login</button>
+        </div>
+
+        <!-- Reset Password Form -->
+        <div class="auth-card reset-card" id="resetCard" style="display: none;">
+            <div class="auth-header" style="text-align: center;">
+                <img src="assets/logo mhcs.png" alt="MHCS Logo" style="height: 80px; width: auto; margin-bottom: 1rem;">
+                <h1>Create New Password</h1>
+                <p>Enter your new password below</p>
+            </div>
+            
+            <form id="resetForm" class="auth-form">
+                <div class="form-group">
+                    <label for="newPassword">New Password</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="newPassword" 
+                            name="newPassword"
+                            placeholder="Enter new password (6+ characters)"
+                            required
+                        >
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('newPassword')">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="confirmNewPassword">Confirm Password</label>
+                    <div class="password-wrapper">
+                        <input 
+                            type="password" 
+                            id="confirmNewPassword" 
+                            name="confirmNewPassword"
+                            placeholder="Confirm your new password"
+                            required
+                        >
+                        <button type="button" class="toggle-password" onclick="togglePasswordVisibility('confirmNewPassword')">
+                            <span class="eye-icon">👁️</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="reset-message" id="resetMessage" style="display: none;"></div>
+
+                <button type="submit" class="btn-submit">Update Password</button>
+            </form>
+
+            <button type="button" class="btn-back" id="backToLoginBtn3">Back to Login</button>
+        </div>
+    </div>
+
+    <!-- Error Modal Popup -->
+    <div class="error-modal-overlay" id="errorModal" style="display: none;">
+        <div class="error-modal-content">
+            <div class="error-modal-header">
+                <h2 id="errorModalTitle">⚠️ Login Failed</h2>
+                <button class="error-modal-close" onclick="closeErrorModal()">✕</button>
+            </div>
+            <div class="error-modal-body">
+                <p id="errorModalMessage">Invalid credentials. Please try again.</p>
+                <div id="errorDetails" class="error-details"></div>
+            </div>
+            <div class="error-modal-footer">
+                <button class="error-modal-btn" onclick="closeErrorModal()">Try Again</button>
+                <button class="error-modal-btn secondary" id="forgotLinkBtn" style="display: none;" onclick="goToForgotPassword()">Forgot Password?</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modern Circular Loading Spinner -->
+    <div class="loading-overlay" id="loadingOverlay">
+        <div class="loading-spinner">
+            <div class="spinner-circle"></div>
+            <div class="spinner-center"></div>
+        </div>
+        <div class="loading-text">Processing<span>...</span></div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/auth.js"></script>
+    <script>
+        // Handle tab switching when coming from homepage
+        document.addEventListener('DOMContentLoaded', () => {
+            const urlParams = new URLSearchParams(window.location.search);
+            const tab = urlParams.get('tab');
+            
+            if (tab === 'register') {
+                // Switch to register form
+                const loginCard = document.getElementById('loginCard');
+                const registerCard = document.getElementById('registerCard');
+                const loginTab = document.querySelector('[data-tab="login"]');
+                const registerTab = document.querySelector('[data-tab="register"]');
+                
+                if (loginCard) loginCard.style.display = 'none';
+                if (registerCard) registerCard.style.display = 'block';
+                if (registerCard) registerCard.classList.add('flip-enter');
+                if (loginTab) loginTab.classList.remove('active');
+                if (registerTab) registerTab.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
