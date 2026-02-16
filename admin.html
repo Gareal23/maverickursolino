@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="MHCS Alumni - Admin Dashboard">
+    <title>Admin Dashboard - MHCS Alumni</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <script>
+        // Check if user is admin on page load
+        function checkAdminAccess() {
+            const userRole = localStorage.getItem('userRole');
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            
+            console.log('Admin check - isLoggedIn:', isLoggedIn, 'userRole:', userRole);
+            
+            if (!isLoggedIn || userRole !== 'admin') {
+                console.log('Not admin user, redirecting to index.html');
+                window.location.href = 'index.html';
+            } else {
+                console.log('Admin user verified, allowing access');
+            }
+        }
+        
+        // Run check when page loads
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', checkAdminAccess);
+        } else {
+            checkAdminAccess();
+        }
+    </script>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <aside class="admin-sidebar" id="adminSidebar">
+        <div class="sidebar-header">
+            <div class="logo-admin">
+                <div class="logo-icon">⚙️</div>
+                <h2>Director Panel</h2>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle">☰</button>
+        </div>
+
+        <nav class="admin-nav">
+            <ul>
+                <li><a href="#dashboard" class="nav-item active" data-section="dashboard">
+                    <span class="icon">📊</span>
+                    <span class="label">Dashboard</span>
+                </a></li>
+                <li><a href="#users" class="nav-item" data-section="users">
+                    <span class="icon">👥</span>
+                    <span class="label">Manage Users</span>
+                </a></li>
+                <li><a href="#directory" class="nav-item" data-section="directory">
+                    <span class="icon">📋</span>
+                    <span class="label">Alumni Directory</span>
+                </a></li>
+                <li><a href="#news" class="nav-item" data-section="news">
+                    <span class="icon">📰</span>
+                    <span class="label">News & Updates</span>
+                </a></li>
+                <li><a href="#events" class="nav-item" data-section="events">
+                    <span class="icon">🎉</span>
+                    <span class="label">Events & Reunions</span>
+                </a></li>
+                <li><a href="#gallery" class="nav-item" data-section="gallery">
+                    <span class="icon">🖼️</span>
+                    <span class="label">Gallery Management</span>
+                </a></li>
+                <li><a href="#donations" class="nav-item" data-section="donations">
+                    <span class="icon">💰</span>
+                    <span class="label">Donations</span>
+                </a></li>
+                <li><a href="#contact" class="nav-item" data-section="contact">
+                    <span class="icon">📧</span>
+                    <span class="label">Contact Messages</span>
+                </a></li>
+                <li><a href="#settings" class="nav-item" data-section="settings">
+                    <span class="icon">⚙️</span>
+                    <span class="label">Settings</span>
+                </a></li>
+            </ul>
+        </nav>
+
+        <div class="sidebar-footer">
+            <button class="btn-logout" id="logoutBtn">Logout</button>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="admin-main">
+        <!-- Header -->
+        <header class="admin-header">
+            <div class="header-left">
+                <button class="menu-toggle" id="menuToggle">☰</button>
+                <h1 id="pageTitle">Dashboard</h1>
+            </div>
+            <div class="header-right">
+                <div class="admin-user">
+                    <img src="assets/logo mhcs.png" alt="MHCS Logo" class="user-avatar" style="border-radius: 50%; object-fit: cover;">
+                    <div class="user-info">
+                        <p class="user-name" id="adminUserName">Loading...</p>
+                        <p class="user-role" id="adminUserRole">Administrator</p>
+                    </div>
+                    <button class="user-menu-btn">▼</button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="content-section" id="dashboard-section">
+            <div class="dashboard-grid">
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #3498db;">👥</div>
+                    <div class="stat-content">
+                        <h3>Total Users</h3>
+                        <p class="stat-number" id="totalUsers">0</p>
+                        <span class="stat-change positive" id="usersChange">0</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #2ecc71;">📰</div>
+                    <div class="stat-content">
+                        <h3>News Posts</h3>
+                        <p class="stat-number">47</p>
+                        <span class="stat-change neutral">8 new this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #f39c12;">💰</div>
+                    <div class="stat-content">
+                        <h3>Total Donations</h3>
+                        <p class="stat-number">$52,840</p>
+                        <span class="stat-change positive">+23% this month</span>
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon" style="background: #e74c3c;">📧</div>
+                    <div class="stat-content">
+                        <h3>Messages</h3>
+                        <p class="stat-number">29</p>
+                        <span class="stat-change neutral">5 unread</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="dashboard-content">
+                <div class="recent-activity">
+                    <h2>Recent Activity</h2>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon">✅</div>
+                            <div class="activity-info">
+                                <p class="activity-title">New user registration</p>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">📝</div>
+                            <div class="activity-info">
+                                <p class="activity-title">News article published</p>
+                                <span class="activity-time">4 hours ago</span>
+                            </div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon">💳</div>
+                            <div class="activity-info">
+                                <p class="activity-title">New donation received</p>
+                                <span class="activity-time">6 hours ago</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quick-actions">
+                    <h2>Quick Actions</h2>
+                    <div class="actions-grid">
+                        <button class="action-btn" data-section="news">
+                            <span class="action-icon">📝</span>
+                            <span>New Post</span>
+                        </button>
+                        <button class="action-btn" data-section="events">
+                            <span class="action-icon">🎉</span>
+                            <span>New Event</span>
+                        </button>
+                        <button class="action-btn" data-section="gallery">
+                            <span class="action-icon">➕</span>
+                            <span>Upload Image</span>
+                        </button>
+                        <button class="action-btn" data-section="users">
+                            <span class="action-icon">➕</span>
+                            <span>Add User</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Users Management Section -->
+        <section class="content-section" id="users-section" style="display: none;">
+            <div class="section-header">
+                <h2>Manage Users</h2>
+                <div style="display: flex; gap: 0.75rem;">
+                    <button class="btn-primary" id="addUserBtn">+ Add New User</button>
+                    <button class="btn-primary" id="exportUsersBtn" style="background: #e74c3c;">📄 Export PDF</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Role</th>
+                            <th>Joined</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="usersTableBody">
+                        <!-- Users will be loaded from database -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Directory Management Section -->
+        <section class="content-section" id="directory-section" style="display: none;">
+            <div class="section-header">
+                <h2>Alumni Directory</h2>
+                <div style="display: flex; gap: 0.75rem;">
+                    <button class="btn-primary" id="exportDirectoryCSVBtn" style="background: #27ae60;">📊 Export CSV</button>
+                    <button class="btn-primary" id="exportDirectoryPDFBtn" style="background: #e74c3c;">📄 Export PDF</button>
+                </div>
+            </div>
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Batch</th>
+                            <th>Email</th>
+                            <th>Profession</th>
+                            <th>Location</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody id="directoryTableBody">
+                        <!-- Alumni directory will be loaded from database -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- News Management Section -->
+        <section class="content-section" id="news-section" style="display: none;">
+            <div class="section-header">
+                <h2>News & Updates</h2>
+                <button class="btn-primary" id="addNewsBtn">+ Create Post</button>
+            </div>
+            <div class="news-list" id="newsList">
+                <!-- News items will be loaded from database -->
+            </div>
+        </section>
+
+        <!-- Events Management Section -->
+        <section class="content-section" id="events-section" style="display: none;">
+            <div class="section-header">
+                <h2>Events & Reunions</h2>
+                <button class="btn-primary" id="addEventBtn">+ Create Event</button>
+            </div>
+            <div class="events-list" id="eventsList">
+                <!-- Events will be loaded from database -->
+            </div>
+        </section>
+
+        <!-- Gallery Management Section -->
+        <section class="content-section" id="gallery-section" style="display: none;">
+            <div class="section-header">
+                <h2>Gallery Management</h2>
+                <button class="btn-primary" id="uploadImageBtn">+ Upload Images</button>
+            </div>
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be loaded from database -->
+            </div>
+        </section>
+
+        <!-- Donations Section -->
+        <section class="content-section" id="donations-section" style="display: none;">
+            <div class="section-header">
+                <h2>Donations</h2>
+            </div>
+            <div class="table-container">
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Donor Name</th>
+                            <th>Amount</th>
+                            <th>Date</th>
+                            <th>Purpose</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody id="donationsTableBody">
+                        <!-- Donations will be loaded from database -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Contact Messages Section -->
+        <section class="content-section" id="contact-section" style="display: none;">
+            <div class="section-header">
+                <h2>Contact Messages</h2>
+            </div>
+            <div class="messages-list" id="contactMessagesList">
+                <!-- Contact messages will be loaded from database -->
+                <p style="text-align: center; color: #999; padding: 2rem;">No messages yet</p>
+            </div>
+        </section>
+
+        <!-- Settings Section -->
+        <section class="content-section" id="settings-section" style="display: none;">
+            <div class="section-header">
+                <h2>Admin Settings</h2>
+            </div>
+            <div class="settings-container">
+                <div class="settings-group">
+                    <h3>Account Settings</h3>
+                    <div class="setting-item">
+                        <label>Email</label>
+                        <input type="email" value="admin@mhcs.edu.ph">
+                    </div>
+                    <div class="setting-item">
+                        <label>Current Password</label>
+                        <input type="password" value="">
+                    </div>
+                    <button class="btn-primary">Update Account</button>
+                </div>
+
+                <div class="settings-group">
+                    <h3>Site Settings</h3>
+                    <div class="setting-item">
+                        <label>Site Title</label>
+                        <input type="text" value="MHCS Alumni Portal">
+                    </div>
+                    <div class="setting-item">
+                        <label>Maintenance Mode</label>
+                        <label class="toggle-switch">
+                            <input type="checkbox">
+                            <span class="toggle-slider"></span>
+                        </label>
+                    </div>
+                    <button class="btn-primary">Save Settings</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- PDF Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/admin.js"></script>
+</body>
+</html>
