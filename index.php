@@ -3,147 +3,782 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Pet Adoption</title>
-    <link rel="stylesheet" href="Css/styles.css">
+    <meta name="description" content="Mary Help of Christians Seminary - Official Alumni Portal">
+    <meta name="keywords" content="MHCS, Seminary, Alumni, Reunions, Donations">
+    <title>MHCS Alumni - Mary Help of Christians Seminary</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/visibility-fix.css">
+    <link rel="stylesheet" href="css/responsive-enhanced.css">
+    <link rel="stylesheet" href="css/mobile-responsive.css">
 </head>
 <body>
+    <!-- ===== HEADER & NAVIGATION ===== -->
     <header>
-        <h1>Adopt a Pet</h1>
         <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#pets">Available Pets</a></li>
-                <li><a href="#adoption-process">Adoption Process</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact Us</a></li>
+            <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 0.75rem;">
+                <img src="assets/logo mhcs.png" alt="MHCS Logo" style="height: 50px; width: auto;">
+                <span>MHCS Alumni</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="pages/about.html" class="nav-link">About</a></li>
+                <li><a href="pages/directory.html" class="nav-link">Directory</a></li>
+                <li><a href="pages/reunions.html" class="nav-link">Reunions</a></li>
+                <li><a href="pages/donate.html" class="nav-link">Give Back</a></li>
+                <li><a href="pages/gallery.html" class="nav-link">Gallery</a></li>
+                <li><a href="pages/news.html" class="nav-link">News</a></li>
+                <li><a href="pages/contact.html" class="nav-link smooth-contact">Contact</a></li>
             </ul>
+            <div class="auth-buttons" style="display: flex; gap: 10px;">
+                <a href="login.html" id="loginBtn" class="cta-button" style="background-color: #667eea; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s;">Log In</a>
+                <a href="login.html?tab=register" id="signupBtn" class="cta-button" style="background-color: #0066ff; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: 2px solid white;">Sign Up</a>
+                <button id="logoutBtn" class="cta-button" style="background-color: #e74c3c; padding: 10px 20px; border-radius: 5px; color: white; text-decoration: none; font-weight: 600; transition: all 0.3s; border: none; cursor: pointer; display: none;">Logout</button>
+            </div>
+            <button class="hamburger" aria-label="Toggle navigation menu" type="button">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </nav>
     </header>
 
-    <section id="hero">
-        <h2>Find Your New Best Friend!</h2>
-        <p>Join us in giving pets a loving home.</p>
-        <button onclick="location.href='#pets'">See Available Pets</button>
-    </section>
-
-    <section id="about">
-        <h2>About Us</h2>
-        <p>We are dedicated to finding loving homes for pets in need. Our mission is to ensure that every pet finds a family that will love and care for them.</p>
-        <p>Join us in making a difference! Our team works tirelessly to rescue, rehabilitate, and rehome pets from various backgrounds.</p>
-    </section>
-
-    <section id="pets">
-        <h2>Available Pets</h2>
-
-        <!-- Pet Card 1 -->
-        <div class="pet-card">
-            <img src="dog.jpg" alt="Dog">
-            <h3>Buddy</h3>
-            <p>Age: 2 years</p>
-            <p>Breed: Golden Retriever</p>
-            <p>Personality: Friendly and playful, loves to fetch!</p>
-            <button onclick="adopt('Buddy')">Adopt Me!</button>
-            <button onclick="location.href='buddy.html'">View Details</button> <!-- Link to detailed profile -->
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Welcome Home, Alumni</h1>
+            <p>Reconnect with your batch, celebrate milestones, and support our seminary mission</p>
+            <div class="hero-buttons">
+                <a href="pages/directory.html" class="btn btn-primary">Join Our Network</a>
+                <a href="pages/reunions.html" class="btn btn-secondary">View Reunions</a>
+            </div>
         </div>
+    </section>
 
-        <!-- Pet Card 2 -->
-        <div class="pet-card">
-            <img src="cat.jpg" alt="Cat">
-            <h3>Whiskers</h3>
-            <p>Age: 3 years</p>
-            <p>Breed: Domestic Shorthair</p>
-            <p>Personality: Independent and curious, loves to explore.</p>
-            <button onclick="adopt('Whiskers')">Adopt Me!</button>
-            <button onclick="location.href='whiskers.html'">View Details</button> <!-- Link to detailed profile -->
+    <!-- ===== FEATURES SECTION ===== -->
+    <section class="features light-bg fade-in-section">
+        <div class="container">
+            <div class="grid">
+                <div class="feature-item">
+                    <div class="feature-icon">👥</div>
+                    <h3 class="feature-title">Alumni Network</h3>
+                    <p class="feature-text">Connect with thousands of MHCS alumni across the globe. Update your profile and find your classmates.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🎉</div>
+                    <h3 class="feature-title">Reunions & Events</h3>
+                    <p class="feature-text">Discover upcoming reunions, special events, and activities organized by different batches and chapters.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">❤️</div>
+                    <h3 class="feature-title">Support Our Mission</h3>
+                    <p class="feature-text">Give back to MHCS through scholarships, facility improvements, and other meaningful projects.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📸</div>
+                    <h3 class="feature-title">Photo Gallery</h3>
+                    <p class="feature-text">Browse memorable moments from campus life, reunions, and special milestones of our community.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">📰</div>
+                    <h3 class="feature-title">News & Updates</h3>
+                    <p class="feature-text">Stay informed with the latest alumni achievements, seminary news, and community announcements.</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🔗</div>
+                    <h3 class="feature-title">Batch Chapters</h3>
+                    <p class="feature-text">Find your batch representative and join regional chapters in your area.</p>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- Pet Card 3 -->
-        <div class="pet-card">
-            <img src="rabbit.jpg" alt="Rabbit">
-            <h3>Coco</h3>
-            <p>Age: 1 year</p>
-            <p>Breed: Holland Lop Rabbit</p>
-            <p>Personality: Gentle and affectionate, loves cuddles!</p>
-            <button onclick="adopt('Coco')">Adopt Me!</button>
-            <button onclick="location.href='coco.html'">View Details</button> <!-- Link to detailed profile -->
+    <!-- ===== ANNOUNCEMENT SECTION ===== -->
+    <section class="white-bg fade-in-section" style="position: relative; overflow: hidden;">
+        <div class="section-arrow">
+            <span>❯</span>
         </div>
-
-    </section>
-
-    <!-- Adoption Process Section -->
-    <section id="adoption-process">
-        <h2>The Adoption Process</h2>
-        <ol class="process-list">
-            <li><strong>Step 1:</strong> Fill out an adoption application form.</li>
-            <li><strong>Step 2:</strong> Meet the pet you are interested in.</li>
-            <li><strong>Step 3:</strong> Complete the necessary paperwork.</li>
-            <li><strong>Step 4:</strong> Pay the adoption fee.</li>
-            <li><strong>Step 5:</strong> Take your new best friend home!</li>
-        </ol>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials">
-        <h2>What Our Adopters Say</h2>
-
-        <!-- Testimonial 1 -->
-        <blockquote class="testimonial">
-            "Adopting Bella was the best decision we ever made! She has brought so much joy to our family." - Sarah K.
-        </blockquote>
-
-        <!-- Testimonial 2 -->
-        <blockquote class="testimonial">
-            "Max is such a loving companion. Thank you for helping us find him!" - John D.
-        </blockquote>
-
-        <!-- Testimonial 3 -->
-        <blockquote class="testimonial">
-            "Coco has filled our home with happiness! We couldn't be happier." - Emily R.
-        </blockquote>
-
-    </section>
-
-    <!-- FAQ Section -->
-    <section id="faq">
-        <h2>Frequently Asked Questions</h2>
-
-        <!-- FAQ Item 1 -->
-        <div class="faq-item">
-            <strong>Q: What is the adoption process?</strong>
-            <p>A: The adoption process involves filling out an application form, meeting the pet, and completing the necessary paperwork.</p>
+        <div class="container">
+            <div class="section-title">
+                <h2>Latest Announcements</h2>
+                <p>Stay updated with important news and events</p>
+            </div>
+            <div class="grid">
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div class="updated-badge">✨ UPDATED</div>
+                    <div style="background: linear-gradient(135deg, #004db8, #003399); padding: 2rem; border-radius: 12px 12px 0 0; color: white; text-align: center;">
+                        <h3 style="margin: 0; font-size: 2rem;">🎓</h3>
+                    </div>
+                    <h3 class="card-title">Class of 2024 Reunion Confirmed</h3>
+                    <p class="card-text">Join us for an unforgettable evening as we celebrate the achievements and memories of the Class of 2024. Mark your calendars for the special reunion event.</p>
+                    <a href="pages/reunions.html" class="card-link">Learn More →</a>
+                </div>
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div class="updated-badge">✨ UPDATED</div>
+                    <div style="background: linear-gradient(135deg, #003399, #0066ff); padding: 2rem; border-radius: 12px 12px 0 0; color: white; text-align: center;">
+                        <h3 style="margin: 0; font-size: 2rem;">🏫</h3>
+                    </div>
+                    <h3 class="card-title">New Scholarship Program Launched</h3>
+                    <p class="card-text">MHCS is proud to announce the establishment of a new scholarship program funded by generous alumni donations, helping deserving students achieve their dreams.</p>
+                    <a href="pages/donate.html" class="card-link">Support The Program →</a>
+                </div>
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div class="updated-badge">✨ UPDATED</div>
+                    <div style="background: linear-gradient(135deg, #0066ff, #0099ff); padding: 2rem; border-radius: 12px 12px 0 0; color: white; text-align: center;">
+                        <h3 style="margin: 0; font-size: 2rem;">🌍</h3>
+                    </div>
+                    <h3 class="card-title">Global Alumni Network Update</h3>
+                    <p class="card-text">Exciting developments in our international chapters! New chapters have been established in Southeast Asia and Europe to serve our global alumni community better.</p>
+                    <a href="pages/directory.html" class="card-link">Find Your Chapter →</a>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- FAQ Item 2 -->
-        <div class="faq-item">
-            <strong>Q: Do you charge an adoption fee?</strong>
-            <p>A: Yes, we do charge an adoption fee which helps cover the cost of vaccinations, spaying/neutering, and other medical expenses.</p>
+    <!-- ===== ALUMNI SPOTLIGHT ===== -->
+    <section class="light-bg fade-in-section" id="spotlight" style="position: relative; overflow: hidden;">
+        <div class="section-arrow">
+            <span>❯</span>
         </div>
-
+        <div class="container">
+            <div class="section-title">
+                <h2>Featured Alumni</h2>
+                <p>Celebrating the achievements of our distinguished graduates</p>
+            </div>
+            <div class="grid">
+                <div class="spotlight-item fade-in-section">
+                    <div class="spotlight-image">
+                        <span style="font-size: 3rem;">👨‍💼</span>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-name">Dr. Jose Santos</h3>
+                        <p class="spotlight-role">Medical Professional & Philanthropist</p>
+                        <p class="spotlight-bio">Class of 2000. A leading heart surgeon and dedicated education advocate, Dr. Santos has established multiple scholarships for underprivileged students pursuing seminary formation.</p>
+                    </div>
+                </div>
+                <div class="spotlight-item fade-in-section">
+                    <div class="spotlight-image">
+                        <span style="font-size: 3rem;">👩‍🏫</span>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-name">Maria Concepcion Reyes</h3>
+                        <p class="spotlight-role">Education Director</p>
+                        <p class="spotlight-bio">Class of 2005. Now serving as Education Director for three schools, Maria has been instrumental in developing formation programs aligned with Catholic values and modern pedagogy.</p>
+                    </div>
+                </div>
+                <div class="spotlight-item fade-in-section">
+                    <div class="spotlight-image">
+                        <span style="font-size: 3rem;">👨‍⚖️</span>
+                    </div>
+                    <div class="spotlight-content">
+                        <h3 class="spotlight-name">Attorney Ramon Cruz</h3>
+                        <p class="spotlight-role">Legal Advocate & Social Justice</p>
+                        <p class="spotlight-bio">Class of 2002. Dedicated to defending the rights of the underprivileged, Attorney Cruz actively supports MHCS through legal consultation and annual fundraising.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2>Contact Us</h2>
-        <form action="submit.php" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Send Message</button>
-        </form>
+
+
+
+
+    <!-- ===== REUNIONS & EVENTS PREVIEW ===== -->
+    <section class="light-bg fade-in-section" id="reunions" style="position: relative; overflow: hidden;">
+        <div class="section-arrow">
+            <span>❯</span>
+        </div>
+        <div class="container">
+            <div class="section-title">
+                <h2>Reunions & Events</h2>
+                <p>Celebrate with your batch and the MHCS community</p>
+            </div>
+            <div class="grid">
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div class="updated-badge">✨ NEW EVENT</div>
+                    <div style="background: linear-gradient(135deg, #004db8, #003399); color: white; padding: 1.5rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 1.5rem -2rem;">
+                        <h4 style="margin: 0; margin-bottom: 0.5rem;">Class of 2024</h4>
+                        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Saturday, March 15, 2026</p>
+                    </div>
+                    <h3 class="card-title">First Anniversary Reunion</h3>
+                    <p class="card-text">One year after graduation! Join your classmates for a special evening of food, games, and nostalgic memories. Hosted at the MHCS Grand Hall.</p>
+                    <a href="pages/reunions.html" class="card-link">Get Details & Register →</a>
+                </div>
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div class="updated-badge">✨ NEW EVENT</div>
+                    <div style="background: linear-gradient(135deg, #003399, #0066ff); color: white; padding: 1.5rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 1.5rem -2rem;">
+                        <h4 style="margin: 0; margin-bottom: 0.5rem;">Class of 2014</h4>
+                        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Saturday, April 5, 2026</p>
+                    </div>
+                    <h3 class="card-title">Decade Celebration</h3>
+                    <p class="card-text">A milestone celebration for the Class of 2014! Reflect on the past decade, celebrate achievements, and reconnect with friends from your formation years.</p>
+                    <a href="pages/reunions.html" class="card-link">Get Details & Register →</a>
+                </div>
+                <div class="card fade-in-section updated-card" style="position: relative;">
+                    <div style="background: linear-gradient(135deg, #0066ff, #0099ff); color: white; padding: 1.5rem; border-radius: 10px 10px 0 0; margin: -2rem -2rem 1.5rem -2rem;">
+                        <h4 style="margin: 0; margin-bottom: 0.5rem;">Golden Jubilee</h4>
+                        <p style="margin: 0; font-size: 0.9rem; opacity: 0.9;">Saturday, May 10, 2026</p>
+                    </div>
+                    <h3 class="card-title">Class of 1974 Golden Celebration</h3>
+                    <p class="card-text">Honoring 50 years of service, faith, and friendship. A special gala dinner with recognition of outstanding contributions to the community and MHCS.</p>
+                    <a href="pages/reunions.html" class="card-link">Get Details & Register →</a>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem;">
+                <a href="pages/reunions.html" class="btn btn-primary">View All Events</a>
+            </div>
+        </div>
     </section>
 
-    <!-- Footer Section -->
+    <!-- ===== GIVING BACK / PROJECTS PREVIEW ===== -->
+    <section class="white-bg fade-in-section" id="giving">
+        <div class="container">
+            <div class="section-title">
+                <h2>Give Back & Support Our Mission</h2>
+                <p>Help us provide quality education and formation for the next generation</p>
+            </div>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
+                <div class="fade-in-section">
+                    <h3 style="color: var(--primary-blue); font-size: 1.8rem; margin-bottom: 2rem;">Impact Projects</h3>
+                    
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Seminary Scholarship Fund</h4>
+                        <p style="margin-bottom: 1rem; color: var(--gray-dark);">Support deserving students through formation scholarships and financial aid programs.</p>
+                        <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                            <div style="background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue)); height: 100%; width: 65%; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 52, 153, 0.5);"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--gray-dark);">
+                            <span>₱2.5M of ₱3.8M goal</span>
+                            <span>65%</span>
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 2.5rem;">
+                        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Campus Infrastructure</h4>
+                        <p style="margin-bottom: 1rem; color: var(--gray-dark);">Renovate dormitories, classrooms, and recreational facilities for student welfare.</p>
+                        <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                            <div style="background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue)); height: 100%; width: 42%; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 52, 153, 0.5);"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--gray-dark);">
+                            <span>₱2.1M of ₱5M goal</span>
+                            <span>42%</span>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Formation Programs</h4>
+                        <p style="margin-bottom: 1rem; color: var(--gray-dark);">Enhance spiritual, academic, and character development programs for students.</p>
+                        <div style="background: var(--gray-200); border-radius: 10px; height: 8px; margin-bottom: 0.5rem;">
+                            <div style="background: linear-gradient(90deg, var(--primary-blue), var(--accent-blue)); height: 100%; width: 78%; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 52, 153, 0.5);"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 0.9rem; color: var(--gray-dark);">
+                            <span>₱1.95M of ₱2.5M goal</span>
+                            <span>78%</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 style="color: var(--primary-blue); font-size: 1.8rem; margin-bottom: 2rem; text-align: center;">Donation Methods</h3>
+                    <div class="grid" style="grid-template-columns: 1fr;">
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">🏦</div>
+                            <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Bank Transfer</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Direct bank deposit to MHCS Foundation Account</p>
+                            <details style="cursor: pointer;">
+                                <summary style="color: var(--accent-blue); font-weight: 600;">View Details</summary>
+                                <div style="background: var(--gray-100); padding: 1rem; border-radius: 8px; margin-top: 0.5rem; text-align: left; font-size: 0.85rem;">
+                                    <p style="margin-bottom: 0.5rem;"><strong>Bank:</strong> Philippines National Bank</p>
+                                    <p style="margin-bottom: 0.5rem;"><strong>Account:</strong> MHCS Foundation</p>
+                                    <p><strong>Code:</strong> PNB-MHCS-001</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">📱</div>
+                            <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">GCash</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Quick and convenient mobile payment</p>
+                            <details style="cursor: pointer;">
+                                <summary style="color: var(--accent-blue); font-weight: 600;">View Details</summary>
+                                <div style="background: var(--gray-100); padding: 1rem; border-radius: 8px; margin-top: 0.5rem; text-align: left; font-size: 0.85rem;">
+                                    <p style="margin-bottom: 0.5rem;"><strong>Number:</strong> +63 917 123 4567</p>
+                                    <p><strong>Name:</strong> MHCS Foundation</p>
+                                </div>
+                            </details>
+                        </div>
+                        <div class="card" style="text-align: center;">
+                            <div style="font-size: 2.5rem; margin-bottom: 1rem;">💳</div>
+                            <h4 style="color: var(--primary-blue); margin-bottom: 0.5rem;">Online Payment</h4>
+                            <p style="font-size: 0.9rem; margin-bottom: 1rem;">Secure PayPal or credit card donation</p>
+                            <a href="pages/donate.html" style="color: var(--accent-blue); text-decoration: none; font-weight: 600;">Donate Now →</a>
+                        </div>
+                    </div>
+                    <a href="pages/donate.html" class="btn btn-primary" style="width: 100%; text-align: center; margin-top: 1.5rem;">Support Our Mission</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="white-bg fade-in-section">
+        <div class="container" style="text-align: center;">
+            <div class="fade-in-section">
+                <h2 style="color: var(--primary-blue); font-size: 2.2rem; margin-bottom: 1rem;">Ready to Join Our Network?</h2>
+                <p style="font-size: 1.1rem; color: var(--gray-dark); margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">Connect with thousands of MHCS alumni worldwide. Update your profile, find your batch mates, and stay informed about reunions and giving opportunities.</p>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="pages/contact.html" class="btn btn-secondary">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ALUMNI PROJECTS & INITIATIVES ===== -->
+    <section class="projects-section fade-in-section" id="projects">
+        <div class="projects-container">
+            <div class="projects-header">
+                <h2 class="projects-title">Alumni Projects & Initiatives</h2>
+                <p class="projects-subtitle">Transforming lives through education, community service, and sustainable development</p>
+            </div>
+
+            <!-- Category Filter Buttons -->
+            <div class="filter-container">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="scholarships">Scholarships</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+            </div>
+
+            <!-- Projects Grid -->
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="scholarships">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #004db8 0%, #0066ff 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🎓</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Scholarships</span>
+                        <h3 class="project-name">Seminary Scholarship Fund</h3>
+                        <p class="project-description">Providing educational scholarships to deserving students from underprivileged backgrounds, enabling them to pursue their vocational calling.</p>
+                        <a href="pages/donate.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="infrastructure">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #003399 0%, #0052cc 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🏫</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Infrastructure</span>
+                        <h3 class="project-name">Campus Renovation Initiative</h3>
+                        <p class="project-description">Modernizing dormitories, libraries, and recreational facilities to provide world-class learning and formation environments for our students.</p>
+                        <a href="pages/donate.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="community">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0066ff 0%, #0099ff 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🤝</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Community</span>
+                        <h3 class="project-name">Community Outreach Program</h3>
+                        <p class="project-description">Connecting alumni volunteers with communities that need support through education, mentorship, and charitable initiatives that create lasting impact.</p>
+                        <a href="pages/about.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="community">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #1a5a96 0%, #003d7a 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">🌍</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Community</span>
+                        <h3 class="project-name">Global Alumni Network</h3>
+                        <p class="project-description">Building stronger connections among alumni chapters worldwide, facilitating knowledge exchange and collaborative initiatives across continents.</p>
+                        <a href="pages/directory.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="scholarships">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #0052cc 0%, #003d7a 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">📚</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Scholarships</span>
+                        <h3 class="project-name">Graduate Support Program</h3>
+                        <p class="project-description">Supporting advanced studies and professional development for promising MHCS graduates pursuing higher education and specialized training.</p>
+                        <a href="pages/donate.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="infrastructure">
+                    <div class="project-image-wrapper">
+                        <div class="project-image" style="background: linear-gradient(135deg, #004db8 0%, #1a5a96 100%); position: relative; overflow: hidden;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 4rem;">⚡</div>
+                            <div class="project-overlay"></div>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span class="project-category">Infrastructure</span>
+                        <h3 class="project-name">Digital Learning Spaces</h3>
+                        <p class="project-description">Establishing cutting-edge technology centers and digital libraries to enhance remote learning capabilities and provide modern educational resources.</p>
+                        <a href="pages/donate.html" class="project-link">Learn More →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 4rem;">
+                <a href="pages/donate.html" class="btn btn-primary">Support a Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
     <footer>
-        <p>&copy; 2024 Pet Adoption Center | Follow us on social media!</p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>MHCS Alumni</h3>
+                <p>Connecting our global community of graduates from Mary Help of Christians Seminary.</p>
+                <div class="social-links">
+                    <a href="https://www.facebook.com" class="social-link" title="Facebook">f</a>
+                    <a href="https://www.twitter.com" class="social-link" title="Twitter">𝕏</a>
+                    <a href="https://www.instagram.com" class="social-link" title="Instagram">📷</a>
+                    <a href="https://www.youtube.com" class="social-link" title="YouTube">▶</a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="pages/directory.html">Alumni Directory</a></li>
+                    <li><a href="pages/reunions.html">Reunions & Events</a></li>
+                    <li><a href="pages/donate.html">Give Back</a></li>
+                    <li><a href="pages/gallery.html">Photo Gallery</a></li>
+                    <li><a href="pages/news.html">News & Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                    <li><a href="pages/about.html">About MHCS</a></li>
+                    <li><a href="pages/programs.html">Programs & Formation</a></li>
+                    <li><a href="pages/admissions.html">Admissions</a></li>
+                    <li><a href="pages/contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support Us</h3>
+                <ul>
+                    <li><a href="pages/donate.html">Make a Donation</a></li>
+                    <li><a href="pages/donate.html">Current Projects</a></li>
+                    <li><a href="pages/contact.html">Contact Development</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Mary Help of Christians Seminary Alumni. All rights reserved. | Designed with ❤️ for our community.</p>
+        </div>
     </footer>
 
-    <!-- JavaScript for Adoption Alert -->
+    <script src="js/main.js"></script>
+    <script src="js/auth-check.js"></script>
+    
     <script>
-        function adopt(petName) {
-            alert(`Thank you for considering adopting ${petName}!`);
+        // Direct hamburger click handler - ensure it works
+        document.addEventListener('DOMContentLoaded', () => {
+            const hamburger = document.querySelector('.hamburger');
+            const navLinks = document.querySelector('.nav-links');
+            
+            if (hamburger && navLinks) {
+                console.log('Direct hamburger handler attached');
+                
+                hamburger.onclick = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Hamburger clicked');
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+                
+                hamburger.ontouchend = function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    console.log('Hamburger touched');
+                    navLinks.classList.toggle('active');
+                    hamburger.classList.toggle('active');
+                };
+            }
+        });
+        // ===== USER PROFILE DISPLAY =====
+        function updateUserProfileUI() {
+            const authStatus = checkUserAuthentication();
+            const loginBtn = document.querySelector('.login-btn');
+            const signupBtn = document.querySelector('.signup-btn');
+            const ctaButton = document.querySelector('.cta-button');
+            const authSeparator = document.querySelector('.auth-separator');
+            
+            if (authStatus.isLoggedIn) {
+                // Hide login/signup buttons
+                if (loginBtn) loginBtn.closest('li').style.display = 'none';
+                if (signupBtn) signupBtn.closest('li').style.display = 'none';
+                if (authSeparator) authSeparator.style.display = 'none';
+                
+                // Update CTA button to user profile
+                if (ctaButton) {
+                    ctaButton.textContent = `👤 ${authStatus.userName}`;
+                    ctaButton.href = '#';
+                    ctaButton.style.background = 'rgba(0, 102, 255, 0.2)';
+                    ctaButton.style.color = 'var(--accent-blue)';
+                    ctaButton.style.border = '2px solid var(--accent-blue)';
+                    ctaButton.style.cursor = 'pointer';
+                    
+                    ctaButton.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        showUserMenu(ctaButton, authStatus.userName, authStatus.userRole);
+                    });
+                }
+            } else {
+                // Show login/signup buttons
+                if (loginBtn) loginBtn.closest('li').style.display = '';
+                if (signupBtn) signupBtn.closest('li').style.display = '';
+                if (authSeparator) authSeparator.style.display = '';
+                
+                // Reset CTA button
+                if (ctaButton) {
+                    ctaButton.textContent = 'Log In';
+                    ctaButton.href = 'login.html';
+                    ctaButton.style.background = '';
+                    ctaButton.style.color = '';
+                    ctaButton.style.border = '';
+                    ctaButton.style.cursor = '';
+                }
+            }
+        }
+        
+        function showUserMenu(triggerBtn, userName, userRole) {
+            // Check if menu already exists
+            let existingMenu = document.getElementById('user-profile-menu');
+            if (existingMenu) {
+                existingMenu.remove();
+                return;
+            }
+            
+            // Create menu
+            const menu = document.createElement('div');
+            menu.id = 'user-profile-menu';
+            menu.style.cssText = `
+                position: absolute;
+                top: 70px;
+                right: 20px;
+                background: white;
+                border-radius: 12px;
+                box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+                z-index: 10000;
+                min-width: 250px;
+                overflow: hidden;
+                animation: slideDownMenu 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            `;
+            
+            menu.innerHTML = `
+                <div style="background: linear-gradient(135deg, #0056b3, #004db8); color: white; padding: 1.5rem; border-bottom: 1px solid #e0e0e0;">
+                    <p style="margin: 0; font-weight: 700; font-size: 1.1rem;">👤 ${userName}</p>
+                    <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; opacity: 0.9; text-transform: capitalize;">${userRole} Account</p>
+                </div>
+                <div style="padding: 1rem 0;">
+                    <a href="pages/directory.html" style="display: block; padding: 0.75rem 1.5rem; color: #333; text-decoration: none; transition: all 0.2s; border-left: 3px solid transparent;">
+                        <span style="font-weight: 600;">📋</span> My Directory Profile
+                    </a>
+                    <a href="pages/contact.html" style="display: block; padding: 0.75rem 1.5rem; color: #333; text-decoration: none; transition: all 0.2s; border-left: 3px solid transparent;">
+                        <span style="font-weight: 600;">💬</span> Send Message
+                    </a>
+                    ${userRole === 'admin' ? '<a href="admin.html" style="display: block; padding: 0.75rem 1.5rem; color: #333; text-decoration: none; transition: all 0.2s; border-left: 3px solid transparent;"><span style="font-weight: 600;">⚙️</span> Admin Dashboard</a>' : ''}
+                </div>
+                <div style="border-top: 1px solid #e0e0e0; padding: 1rem;">
+                    <button type="button" id="logout-btn" style="
+                        width: 100%;
+                        background: #ff3b30;
+                        color: white;
+                        border: none;
+                        padding: 0.75rem 1rem;
+                        border-radius: 8px;
+                        font-weight: 600;
+                        cursor: pointer;
+                        transition: all 0.2s;
+                    ">
+                        🚪 Log Out
+                    </button>
+                </div>
+            `;
+            
+            // Add hover effects
+            const links = menu.querySelectorAll('a');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', () => {
+                    link.style.background = '#f5f5f5';
+                    link.style.borderLeftColor = 'var(--accent-blue)';
+                });
+                link.addEventListener('mouseleave', () => {
+                    link.style.background = '';
+                    link.style.borderLeftColor = 'transparent';
+                });
+            });
+            
+            document.body.appendChild(menu);
+            
+            // Logout button
+            document.getElementById('logout-btn').addEventListener('click', () => {
+                logoutUser();
+            });
+            
+            // Close menu when clicking outside
+            setTimeout(() => {
+                document.addEventListener('click', closeUserMenu, true);
+            }, 100);
+        }
+        
+        function closeUserMenu() {
+            const menu = document.getElementById('user-profile-menu');
+            if (menu) {
+                menu.style.animation = 'slideUpMenu 0.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
+                setTimeout(() => {
+                    menu.remove();
+                    document.removeEventListener('click', closeUserMenu, true);
+                }, 200);
+            }
+        }
+        
+        // Add animation keyframes
+        if (!document.getElementById('user-menu-styles')) {
+            const style = document.createElement('style');
+            style.id = 'user-menu-styles';
+            style.textContent = `
+                @keyframes slideDownMenu {
+                    from {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                    to {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                }
+                
+                @keyframes slideUpMenu {
+                    from {
+                        opacity: 1;
+                        transform: translateY(0);
+                    }
+                    to {
+                        opacity: 0;
+                        transform: translateY(-10px);
+                    }
+                }
+            `;
+            document.head.appendChild(style);
+        }
+        
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            updateUserProfileUI();
+            updateAuthButtons();
+        });
+        
+        // Check for auth changes every 1 second
+        setInterval(() => {
+            updateAuthButtons();
+            updateUserProfileUI();
+        }, 1000);
+        
+        // ===== UPDATE AUTH BUTTONS BASED ON LOGIN STATUS =====
+        function updateAuthButtons() {
+            const isLoggedIn = localStorage.getItem('userLoggedIn') === 'true';
+            const loginBtn = document.getElementById('loginBtn');
+            const signupBtn = document.getElementById('signupBtn');
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            // Mobile buttons
+            const loginBtnMobile = document.getElementById('loginBtnMobile');
+            const signupBtnMobile = document.getElementById('signupBtnMobile');
+            
+            if (isLoggedIn) {
+                // Hide login and signup, show logout (desktop)
+                if (loginBtn) {
+                    loginBtn.style.display = 'none';
+                    loginBtn.style.visibility = 'hidden';
+                }
+                if (signupBtn) {
+                    signupBtn.style.display = 'none';
+                    signupBtn.style.visibility = 'hidden';
+                }
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'block';
+                    logoutBtn.style.visibility = 'visible';
+                    logoutBtn.onclick = (e) => {
+                        e.preventDefault();
+                        localStorage.clear();
+                        window.location.href = 'index.html';
+                    };
+                }
+                
+                // Hide login and signup (mobile)
+                if (loginBtnMobile) {
+                    loginBtnMobile.style.display = 'none';
+                    loginBtnMobile.style.visibility = 'hidden';
+                }
+                if (signupBtnMobile) {
+                    signupBtnMobile.style.display = 'none';
+                    signupBtnMobile.style.visibility = 'hidden';
+                }
+            } else {
+                // Show login and signup, hide logout (desktop)
+                if (loginBtn) {
+                    loginBtn.style.display = 'block';
+                    loginBtn.style.visibility = 'visible';
+                }
+                if (signupBtn) {
+                    signupBtn.style.display = 'block';
+                    signupBtn.style.visibility = 'visible';
+                }
+                if (logoutBtn) {
+                    logoutBtn.style.display = 'none';
+                    logoutBtn.style.visibility = 'hidden';
+                }
+                
+                // Show login and signup (mobile)
+                if (loginBtnMobile) {
+                    loginBtnMobile.style.display = 'block';
+                    loginBtnMobile.style.visibility = 'visible';
+                }
+                if (signupBtnMobile) {
+                    signupBtnMobile.style.display = 'block';
+                    signupBtnMobile.style.visibility = 'visible';
+                }
+            }
         }
     </script>
-
 </body>
 </html>
